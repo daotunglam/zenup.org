@@ -1,0 +1,19 @@
+<svg width="35.367mm" height="248.06mm" version="1.1" viewBox="0 0 35.367 248.06" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="linearGradient1515">
+   <stop stop-color="#ff0" offset="0"/>
+   <stop stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <radialGradient id="radialGradient474" cx="3.7696" cy="57.061" r="25" gradientTransform="matrix(1.069 -1.0762 .94539 .93907 -17.672 -268.5)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient1515"/>
+  <radialGradient id="radialGradient474-4" cx="3.7696" cy="57.061" r="25" gradientTransform="matrix(1.069 -1.0762 .94539 .93907 7.2838 -293.49)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient1515"/>
+  <radialGradient id="radialGradient474-9" cx="3.7696" cy="57.061" r="25" gradientTransform="matrix(1.069 -1.0762 .94539 .93907 32.261 -318.51)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient1515"/>
+ </defs>
+ <g transform="translate(-108.86 -23.789)">
+  <g stroke-width=".10936">
+   <rect transform="rotate(135)" x="27.757" y="-231.71" width="25" height="25" ry="0" fill="url(#radialGradient474)"/>
+   <rect transform="rotate(135)" x="52.712" y="-256.7" width="25" height="25" ry="0" fill="url(#radialGradient474-4)"/>
+   <rect transform="rotate(135)" x="77.689" y="-281.72" width="25" height="25" ry="0" fill="url(#radialGradient474-9)"/>
+  </g>
+  <rect x="126.42" y="23.789" width=".3" height="142.01" stroke-width=".26659"/>
+ </g>
+</svg>
