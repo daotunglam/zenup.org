@@ -7,12 +7,13 @@ import BtnMenu from "../BtnMenu/BtnMenu";
 
 export default function Navbar() {
     const [NavbarOpened, setOpen] = useState(false);
+    const location = useLocation();
 
     const toggleNavbar = () => {
         setOpen(!NavbarOpened);
     }
     
-    useEffect(()=>{setOpen(false)}, [useLocation()]);
+    useEffect(()=>{setOpen(false)}, [location]);
 
     return (
         <div className={clsx('Navbar', !NavbarOpened && 'closed')}>
