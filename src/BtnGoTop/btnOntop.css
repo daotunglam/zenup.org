@@ -1,0 +1,16 @@
+
+/****** BTN ONTOP (start) ******/
+#onTopButton {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    position: fixed;
+    bottom: 4vh;
+    right: 1rem;
+    display: none;
+}
+#onTopButton:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 4px;
+}
+/****** BTN ONTOP (end) ******/

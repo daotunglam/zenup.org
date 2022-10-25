@@ -32,7 +32,7 @@
         }
     }
 
-    &.open {
+    &.opened {
         transform: rotate(-45deg);
         .line-menu{
             &.start{
