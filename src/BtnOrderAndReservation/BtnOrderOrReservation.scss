@@ -1,0 +1,27 @@
+.BtnOrderOrReservation {
+    position: absolute;
+    bottom: 100px;
+    left: 24px;
+    z-index: 999;
+
+    button {
+        color: gold;
+    }
+
+
+    &.onSite {
+        position: fixed;
+        transform: translateX(calc(-100% + 16px));
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        &.showed {
+            transform: translateX(0);
+        }
+
+        .toggler {
+            height: 36px;
+            
+        }
+    }
+}

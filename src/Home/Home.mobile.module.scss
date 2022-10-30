@@ -1,3 +1,8 @@
+.openHours {
+    text-align: center;
+    margin: 64px 0;
+}
+
 .bgImg {
     position: -webkit-sticky;
     position: sticky;
@@ -5,5 +10,7 @@
     height: 100vh;
     width: 100vw;
     object-fit: cover;
+    object-position: 85% 0%;
+    filter: brightness(50%);
     z-index: -1;
 }

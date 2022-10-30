@@ -1,13 +1,18 @@
 $backgroundColor1: #26333a;
+$backgroundColor2: #aed0a6;
 
 .Header {
     width: 100vw;
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background: -webkit-linear-gradient(to bottom, #aed0a6, #271827);
+    // background: -webkit-linear-gradient(to bottom, #aed0a6, #271827);
+    background: -webkit-linear-gradient(to left bottom, #406d8e, #000000);
+    // background: linear-gradient(to bottom, #d4d7d9 10%, #373737, #312a06, #000000);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #aed0a6, #271827);
+    // background: linear-gradient(to bottom, #aed0a6, #271827);
+    background: linear-gradient(to left bottom, #406d8e, #000000);
+    // background: linear-gradient(to bottom, #d4d7d9 10%, #373737, #312a06, #000000);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -50,8 +55,13 @@ $backgroundColor1: #26333a;
 }
 
 @keyframes bloom {
-    0% {width: 0}
-    100% {width: 24px}
+    0% {
+        width: 0
+    }
+
+    100% {
+        width: 16px
+    }
 }
 
 .lantern {
@@ -76,4 +86,56 @@ $backgroundColor1: #26333a;
     position: absolute;
     bottom: 200px;
     right: 30px;
+}
+
+.btnGroup {
+    position: absolute;
+    bottom: 100px;
+    transform: translateX(-50%);
+    left: 50%;
+    white-space: nowrap;
+
+    button {
+        color: gold;
+    }
+}
+
+.onSite {
+    &::after{
+        content: '>';
+        color: gold;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    position: fixed;
+    transform: translateX(calc(-100% + 20px));
+    left: 0;
+}
+
+.popUp {
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .content {
+        position: fixed;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: white;
+        width: 280px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 24px;
+        border-radius: 4px;
+    }
 }

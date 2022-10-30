@@ -1,0 +1,35 @@
+.Menu {
+    margin-top: 100px;
+    width: 100vw;
+
+    .menuPage {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .large {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+        .overlay {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            max-width: 500px;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+    }
+}

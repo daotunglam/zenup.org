@@ -30,25 +30,25 @@ export default function Navbar() {
 
                 <Link to="/menu" className="navItem">MENU</Link>
 
-                <a
-                    href="https://www.google.com"
+                <Link
+                    to="/location1"
                     className="navItem"
                     target="_blank"
                     rel="noreferrer"
                 >
                     <span>Location 1</span>
                     <span className="sub">Augustenstraße 52</span>
-                </a>
+                </Link>
 
-                <a
-                    href="https://sushixeng.de"
+                <Link
+                    to="/location2"
                     className="navItem"
                     target="_blank"
                     rel="noreferrer"
                 >
                     <span>Location 2</span>
                     <span className="sub">Sendlinger Straße 7</span>
-                </a>
+                </Link>
             </div>
 
         </div>
