@@ -1,8 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { BrowserView, MobileView } from 'react-device-detect';
-import { useLocation } from "react-router-dom";
-import D from './Header.desktop.module.scss';
+import { useState } from "react";
+import { MobileView } from 'react-device-detect';
 import M from './Header.mobile.module.scss';
 
 import bough from '../../imgs/bough3.svg';
@@ -75,9 +73,5 @@ export default function Header() {
             />
 
         </MobileView>
-
-        <BrowserView>
-            <div className={D.Header}>HEADER</div>
-        </BrowserView>
     </>
 }

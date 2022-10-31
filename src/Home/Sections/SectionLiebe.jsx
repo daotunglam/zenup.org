@@ -1,5 +1,5 @@
 import './section.scss';
-import SashimiTuna from '../../imgs/mealsLieferando/quality=90-max_weight=9500/SushiXeng_Food_SashimiTuna_4x3.jpg';
+import SashimiTuna from '../../imgs/mealsLieferando/quality=90-max_weight=9500/dish_15.jpg';
 
 export default function SectionLiebe() {
     return (

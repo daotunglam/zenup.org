@@ -2,13 +2,30 @@ import './Location.scss';
 import { isMobile } from 'react-device-detect';
 import restaurant from '../imgs/restaurant.jfif';
 import RestaurantName from '../RestaurantName/RestaunrantName';
-import BtnOrderOrReservation from '../BtnOrderAndReservation/BtnOrderOrReservation';
+import Button from '@mui/material/Button';
+import clsx from 'clsx';
+import { useState, useEffect } from "react";
+import SectionMenu from '../Home/Sections/SectionMenu';
+import SectionKindsOfMeal from '../Home/Sections/SectionKindsOfMeal';
+import restaurantWall from '../imgs/restaurantWall.jfif';
 
 export default function Location2() {
+
+    const [onSite, setOnSite] = useState(false);
+    const [showed, setShowed] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => setOnSite(window.scrollY > 800))
+
+        return () => {
+            window.removeEventListener('scroll', () => setOnSite(window.scrollY > 800))
+        }
+    }, [])
+
     return (
         <div className='location'>
             <div className={isMobile ? 'mobile' : 'desktop'}>
-                <img src={restaurant} className="bgImg" alt="restaurant" />
+                <img src={restaurant} className="bgImg headerLocation2" alt="restaurant" />
 
                 <div className='title'>
                     <RestaurantName />
@@ -18,12 +35,30 @@ export default function Location2() {
                     </div>
                 </div>
 
+                <div
+                    className={clsx(
+                        'BtnOrderOrReservation',
+                        onSite && 'onSite',
+                        showed && 'showed'
+                    )}
+                >
+                    <Button >
+                        BESTELLUNG
+                    </Button>
 
+                    <Button >
+                        TISCH RESERVIERUNG
+                    </Button>
 
-                <p className='description' >
-                    Wir gehören zu der Systemgastronomie Geisha.
-                    Unsere Sushi-Chefs sind Meister der Sushi Arrangierkunst.
-                </p>
+                    <Button className="toggler" onClick={() => setShowed(!showed)} />
+                </div>
+
+                <SectionMenu />
+
+                <img src={restaurantWall} className='bgImg' alt="restaurant" />
+
+                <SectionKindsOfMeal />
+
             </div>
         </div>
     )

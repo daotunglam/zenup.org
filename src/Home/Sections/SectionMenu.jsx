@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './section.scss';
+import styles from './SectionMenu.module.scss';
 
 export default function SectionMenu() {
     const menuDemo = [
@@ -31,9 +32,9 @@ export default function SectionMenu() {
     ]
 
     const renderMenuDemo = menuDemo.map((item, i) =>
-        <div className="menuItem" key={i}>
-            <div className="name">{item.name}</div>
-            <div className="subname">
+        <div className={styles.menuItem} key={i}>
+            <div className={styles.name}>{item.name}</div>
+            <div className={styles.subname}>
                 {item.subname}
             </div>
         </div>
@@ -41,12 +42,12 @@ export default function SectionMenu() {
 
 
     return <>
-        <div className="SectionMenu">
-            <div className="title">Unser Menü</div>
-            <div className="menu">
+        <div className={styles.SectionMenu}>
+            <div className={styles.title}>Unser Menü</div>
+            <div>
                 {renderMenuDemo}
             </div>
-            <div className="link">
+            <div className={styles.link}>
                 <Link to="/menu" >unser Menü ansehen</Link>
             </div>
         </div>

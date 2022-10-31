@@ -67,7 +67,7 @@ export default function Footer() {
                         <Link to="imprint" >Impressum</Link>
                     </p>
                     <p>
-                        <a href="https://tunglam-dao.com.de">Web Developer tunglamdao</a>
+                        <a className={M.webDeveloper} href="https://tunglam-dao.com.de">Web Developer tunglamdao</a>
                     </p>
                 </div>
 

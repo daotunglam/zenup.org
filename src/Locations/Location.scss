@@ -7,9 +7,16 @@
             height: 100vh;
             width: 100vw;
             object-fit: cover;
-            object-position: 90% 0%;
             filter: brightness(30%);
             z-index: -1;
+
+            &.headerLocation1 {
+                object-position: 10% 0%;
+            }
+
+            &.headerLocation2 {
+                object-position: 90% 0%;
+            }
         }
 
         .title {

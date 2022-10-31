@@ -10,7 +10,6 @@ import Logo from "./Logo/Logo";
 import Imprint from './Imprint';
 import Location1 from './Locations/Location1';
 import Location2 from './Locations/Location2';
-
 function App() {
   return (
     <div className="App">
