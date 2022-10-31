@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import SectionMenu from '../Home/Sections/SectionMenu';
 import SectionKindsOfMeal from '../Home/Sections/SectionKindsOfMeal';
 import restaurantWall from '../imgs/restaurantWall.jfif';
+import Gallery from '../Gallery/Gallery';
 
 export default function Location2() {
 
@@ -58,6 +59,9 @@ export default function Location2() {
                 <img src={restaurantWall} className='bgImg' alt="restaurant" />
 
                 <SectionKindsOfMeal />
+
+                
+                <Gallery />
 
             </div>
         </div>

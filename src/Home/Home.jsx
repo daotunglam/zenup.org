@@ -8,6 +8,7 @@ import SectionWelcome from "./Sections/SectionWellcome";
 import SectionLiebe from "./Sections/SectionLiebe";
 import SectionKindsOfMeal from "./Sections/SectionKindsOfMeal";
 import SectionMenu from "./Sections/SectionMenu";
+import Gallery from "../Gallery/Gallery";
 
 export default function Home() {
     return <>
@@ -45,6 +46,7 @@ export default function Home() {
         <img src={SushiXeng_Hero} className={M.bgImg} alt="SushiXeng_Hero" />
 
         <SectionLiebe />
-        
+
+        <Gallery />
     </>
 }

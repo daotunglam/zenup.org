@@ -36,7 +36,7 @@ export default function Navbar() {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <span>Location 1</span>
+                    <span>LOCATION 1</span>
                     <span className="sub">Augustenstraße 52</span>
                 </Link>
 
@@ -46,8 +46,17 @@ export default function Navbar() {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <span>Location 2</span>
+                    <span>LOCATION 2</span>
                     <span className="sub">Sendlinger Straße 7</span>
+                </Link>
+
+                <Link
+                    to="/gallery"
+                    className="navItem"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <span>GALLERY</span>
                 </Link>
             </div>
 

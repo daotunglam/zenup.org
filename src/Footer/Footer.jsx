@@ -1,6 +1,5 @@
 import { BrowserView, MobileView } from 'react-device-detect';
 import M from './Footer.mobile.module.scss';
-import D from './Footer.desktop.module.scss';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Footer() {
@@ -21,7 +20,7 @@ export default function Footer() {
 
                 <h2>BESUCHEN SIE UNS IN</h2>
 
-                {(locationHome || location1) &&
+                {!location2 &&
                     <div>
                         <h4>SUSHI XENG IN <br /> MAXVORSTADT</h4>
                         <p>
@@ -42,7 +41,7 @@ export default function Footer() {
                     </div>
                 }
 
-                {(locationHome || location2) &&
+                {!location1 &&
                     <div>
                         <h4>SUSHI XENG IN <br /> ANGER BLOCK INNENHOF</h4>
                         <p>
@@ -62,6 +61,7 @@ export default function Footer() {
                             loading="lazy"></iframe>
                     </div>
                 }
+                
                 <div className={M.extra}>
                     <p>
                         <Link to="imprint" >Impressum</Link>
