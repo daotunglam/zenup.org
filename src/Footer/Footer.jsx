@@ -5,6 +5,9 @@ import { Link, useLocation } from 'react-router-dom';
 
 export default function Footer() {
     const location = useLocation();
+    const locationHome = (location.pathname === '/');
+    const location1 = (location.pathname === '/location1');
+    const location2 = (location.pathname === '/location2');
 
     return (
         <>
@@ -18,7 +21,7 @@ export default function Footer() {
 
                 <h2>BESUCHEN SIE UNS IN</h2>
 
-                {((location.pathname === '/') || (location.pathname === '/location1')) &&
+                {(locationHome || location1) &&
                     <div>
                         <h4>SUSHI XENG IN <br /> MAXVORSTADT</h4>
                         <p>
@@ -39,7 +42,7 @@ export default function Footer() {
                     </div>
                 }
 
-                {((location.pathname === '/') || (location.pathname === '/location2')) &&
+                {(locationHome || location2) &&
                     <div>
                         <h4>SUSHI XENG IN <br /> ANGER BLOCK INNENHOF</h4>
                         <p>

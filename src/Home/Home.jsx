@@ -11,6 +11,7 @@ import SectionMenu from "./Sections/SectionMenu";
 
 export default function Home() {
     return <>
+
         <Header />
 
         <div className={M.openHours}>
@@ -44,5 +45,6 @@ export default function Home() {
         <img src={SushiXeng_Hero} className={M.bgImg} alt="SushiXeng_Hero" />
 
         <SectionLiebe />
+        
     </>
 }

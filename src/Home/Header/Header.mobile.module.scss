@@ -88,30 +88,6 @@ $backgroundColor2: #aed0a6;
     right: 30px;
 }
 
-.btnGroup {
-    position: absolute;
-    bottom: 100px;
-    transform: translateX(-50%);
-    left: 50%;
-    white-space: nowrap;
-
-    button {
-        color: gold;
-    }
-}
-
-.onSite {
-    &::after{
-        content: '>';
-        color: gold;
-        font-weight: bold;
-        font-size: 20px;
-    }
-    position: fixed;
-    transform: translateX(calc(-100% + 20px));
-    left: 0;
-}
-
 .popUp {
 
     .overlay {

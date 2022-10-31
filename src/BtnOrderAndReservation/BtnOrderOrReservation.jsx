@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import clsx from 'clsx';
 
 export default function BtnOrderOrReservation(props) {
+
     const [onSite, setOnSite] = useState(false);
     const [showed, setShowed] = useState(false);
 
@@ -23,13 +24,11 @@ export default function BtnOrderOrReservation(props) {
                 showed && 'showed'
             )}
         >
-            <Button onClick={props.setPopUpOrderOpened}>
+            <Button onClick={props.PopupOrder}>
                 BESTELLUNG
             </Button>
-
-            <br />
             
-            <Button onClick={props.setPopUpReservationOpened}>
+            <Button onClick={props.PopupReservation}>
                 TISCH RESERVIERUNG
             </Button>
 
