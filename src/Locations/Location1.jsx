@@ -52,7 +52,7 @@ export default function Location1() {
                         TISCH RESERVIERUNG
                     </Button>
 
-                    <Button className="toggler" onClick={() => setShowed(!showed)} />
+                    <span className="toggler" onClick={() => setShowed(!showed)} >||</span>
                 </div>
 
                 <SectionMenu />

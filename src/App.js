@@ -22,7 +22,6 @@ function App() {
           <Route path="menu" element={<Menu />} />
           <Route path="location1" element={<Location1 />} />
           <Route path="location2" element={<Location2 />} />
-          <Route path="gallery" element={<Gallery />} />
           <Route path="imprint" element={<Imprint />} />
         </Routes>
 

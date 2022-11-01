@@ -10,10 +10,12 @@ export default function Gallery() {
         </div>)
 
     return (
-        <div>
-            <Carousel>
-                {renderImgs}
-            </Carousel>
+        <div className={styles.Gallery} id="Gallery">
+            <div className={styles.carouselContainer}>
+                <Carousel className={styles.carousel} showIndicators={false}>
+                    {renderImgs}
+                </Carousel>
+            </div>
         </div>
     )
 }

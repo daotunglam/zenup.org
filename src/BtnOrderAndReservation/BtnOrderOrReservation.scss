@@ -2,7 +2,7 @@
     position: absolute;
     bottom: 100px;
     left: 24px;
-    z-index: 999;
+    z-index: 1;
     white-space: nowrap;
     
     button {
@@ -23,8 +23,8 @@
         }
 
         .toggler {
-            height: 36px;
-            padding: 0;
+            padding: 4px;
+            color: rgba(255,255,255,0.7)
         }
     }
 }

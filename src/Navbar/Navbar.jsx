@@ -17,6 +17,7 @@ export default function Navbar() {
 
     return (
         <div className={clsx('Navbar', !NavbarOpened && 'closed')}>
+            
             <BtnMenu
                 toggleNavbar={toggleNavbar}
                 NavbarOpened={NavbarOpened}
@@ -27,8 +28,6 @@ export default function Navbar() {
             <div className="itemsBox">
 
                 <Link to="/" className="navItem">HOME</Link>
-
-                <Link to="/menu" className="navItem">MENU</Link>
 
                 <Link
                     to="/location1"
@@ -50,14 +49,15 @@ export default function Navbar() {
                     <span className="sub">Sendlinger Straße 7</span>
                 </Link>
 
-                <Link
-                    to="/gallery"
+                <a
+                    href="#Gallery"
                     className="navItem"
-                    target="_blank"
                     rel="noreferrer"
                 >
                     <span>GALLERY</span>
-                </Link>
+                </a>
+
+                <Link to="/menu" className="navItem">MENU</Link>
             </div>
 
         </div>

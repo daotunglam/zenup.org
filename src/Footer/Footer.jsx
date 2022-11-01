@@ -1,6 +1,9 @@
 import { BrowserView, MobileView } from 'react-device-detect';
 import M from './Footer.mobile.module.scss';
 import { Link, useLocation } from 'react-router-dom';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import MailIcon from '@mui/icons-material/Mail';
 
 export default function Footer() {
     const location = useLocation();
@@ -61,8 +64,20 @@ export default function Footer() {
                             loading="lazy"></iframe>
                     </div>
                 }
-                
+
                 <div className={M.extra}>
+                    <div className={M.socialLinks}>
+                        <a href="https://www.facebook.com/Xeng-Sushi-Munich-101711799305327" target="_blank">
+                            <FacebookIcon />
+                        </a>
+                        <a href="https://instagram.com/sushi.xeng" target="_blank">
+                            <InstagramIcon />
+                        </a>
+                        <a href="mailto:hello@sushixeng.de?subject=Hello!" target="_self">
+                            <MailIcon />
+                        </a>
+                    </div>
+
                     <p>
                         <Link to="imprint" >Impressum</Link>
                     </p>

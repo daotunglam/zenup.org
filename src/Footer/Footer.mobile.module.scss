@@ -22,6 +22,12 @@
     margin-top: 64px;
 }
 
+.socialLinks {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+
 .gridTplCol200 {
     display: grid;
     grid-gap: 2rem;

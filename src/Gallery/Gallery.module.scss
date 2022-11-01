@@ -1,1 +1,20 @@
+.Gallery {
+    margin-top: 120px;
+}
 
+.carouselContainer {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel{
+    max-width: 800px;
+    width: 100vw;
+}
+.groupBtn {
+    position: relative;
+    height: 200px;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { MobileView } from 'react-device-detect';
-import M from './Header.mobile.module.scss';
+import M from './Header.module.scss';
 
 import bough from '../../imgs/bough3.svg';
 // import cloud11 from '../../imgs/cloud11.svg';
@@ -11,7 +11,7 @@ import sakura1 from '../../imgs/sakura1.svg';
 import RestaurantName from "../../RestaurantName/RestaunrantName";
 
 import BtnOrderOrReservation from "../../BtnOrderAndReservation/BtnOrderOrReservation";
-import Popup from "../../Popup/Popup";
+import Popup from "../../BtnOrderAndReservation/Popup";
 
 export default function Header() {
 
@@ -27,8 +27,17 @@ export default function Header() {
         ))
     }
 
-    const [PopupReservation, setPopupReservation] = useState(false)
-    const [PopupOrder, setPopupOrder] = useState(false)
+    const [open, setOpen] = useState(false);
+    const [btnName, setBtnName] = useState('');
+  
+    const handleClickOpen = (value) => {
+      setOpen(true);
+      setBtnName(value)
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
 
     return <>
         <MobileView className={M.Header}>
@@ -61,15 +70,13 @@ export default function Header() {
             </div>
 
             <BtnOrderOrReservation
-                PopupOrder={() => setPopupOrder(!PopupOrder)}
-                PopupReservation={() => setPopupReservation(!PopupReservation)}
+                onClick={()=>handleClickOpen(btnName)}
             />
 
             <Popup
-                PopupOrder={PopupOrder}
-                closePopupOrder={() => setPopupOrder(false)}
-                PopupReservation={PopupReservation}
-                closePopupReservation={() => setPopupReservation(false)}
+                open={open}
+                btnName={btnName}
+                onClose={handleClose}
             />
 
         </MobileView>

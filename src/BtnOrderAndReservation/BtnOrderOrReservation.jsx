@@ -24,15 +24,15 @@ export default function BtnOrderOrReservation(props) {
                 showed && 'showed'
             )}
         >
-            <Button onClick={props.PopupOrder}>
+
+            <Button variant="outlined" onClick={() => props.onClick('order')}>
                 BESTELLUNG
             </Button>
-            
-            <Button onClick={props.PopupReservation}>
+            <Button variant="outlined" onClick={() => props.onClick('reservation')}>
                 TISCH RESERVIERUNG
             </Button>
 
-            <Button className="toggler" onClick={() => setShowed(!showed)} />
+            <span className="toggler" onClick={() => setShowed(!showed)} >||</span>
         </div>
     )
 }
