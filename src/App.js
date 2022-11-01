@@ -6,11 +6,9 @@ import Home from './Home/Home';
 import Menu from './Menu/Menu';
 import BtnGoTop from './BtnGoTop/BtnGoTop';
 import Footer from './Footer/Footer';
-import Logo from "./Logo/Logo";
 import Imprint from './Imprint';
 import Location1 from './Locations/Location1';
 import Location2 from './Locations/Location2';
-import Gallery from './Gallery/Gallery';
 
 function App() {
   return (
@@ -28,8 +26,6 @@ function App() {
         <Footer />
 
         <BtnGoTop />
-
-        <Logo />
 
         <Navbar />
 
