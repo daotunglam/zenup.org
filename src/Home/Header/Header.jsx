@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { MobileView } from 'react-device-detect';
 import M from './Header.module.scss';
 
 import bough from '../../imgs/bough3.svg';
@@ -13,14 +12,25 @@ import RestaurantName from "../../RestaurantName/RestaunrantName";
 import BtnOrderOrReservation from "../../BtnOrderAndReservation/BtnOrderOrReservation";
 import Popup from "../../BtnOrderAndReservation/Popup";
 
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+
 export default function Header() {
+
+    const { width } = useWindowDimensions();
 
     const getRandom = max => Math.floor(Math.random() * max);
 
     const renderFlowers = () => {
         return [...Array(50)].map((e, i) => (
             <div key={i}>
-                <div className={M.flower} style={{ left: getRandom(320), top: getRandom(200) }}>
+                <div
+                    className={M.flower}
+                    style={
+                        (width < 600)
+                            ? { left: getRandom(320), top: getRandom(200) }
+                            : { left: getRandom(500), top: getRandom(300) }
+                    }
+                >
                     <img src={sakura1} alt="flower" />
                 </div>
             </div>
@@ -29,20 +39,30 @@ export default function Header() {
 
     const [open, setOpen] = useState(false);
     const [btnName, setBtnName] = useState('');
-  
+
     const handleClickOpen = (value) => {
-      setOpen(true);
-      setBtnName(value)
+        setOpen(true);
+        setBtnName(value)
     };
-  
+
     const handleClose = () => {
-      setOpen(false);
+        setOpen(false);
     };
 
     return <>
-        <MobileView className={M.Header}>
+        <div className={M.Header}>
 
-            <div className={M.sun}></div>
+            <div className={M.sky}>
+                <div className={M.sun} />
+
+                <div className={M.cloud} style={{ left: 0.7*width, top: 0 }}>
+                    <img src={cloud12} alt="cloud" />
+                </div>
+                
+                <div className={M.cloud} style={{ right: 0.7*width, bottom: 0 }}>
+                    <img src={cloud12} alt="cloud" />
+                </div>
+            </div>
 
             <div className={M.tree}>
                 <div className={M.bough}>
@@ -58,19 +78,12 @@ export default function Header() {
                     <img src={lantern} alt="lantern" />
                 </div>
             </div>
-
-            <div className={M.cloud} style={{ right: 30, top: 320 }}>
-                <img src={cloud12} alt="cloud" />
-            </div>
-            <div className={M.cloud} style={{ left: 0, top: 520 }}>
-                <img src={cloud12} alt="cloud" />
-            </div>
             <div className={M.title}>
                 <RestaurantName />
             </div>
 
             <BtnOrderOrReservation
-                onClick={()=>handleClickOpen(btnName)}
+                onClick={(btnName) => handleClickOpen(btnName)}
             />
 
             <Popup
@@ -79,6 +92,6 @@ export default function Header() {
                 onClose={handleClose}
             />
 
-        </MobileView>
+        </div>
     </>
 }
