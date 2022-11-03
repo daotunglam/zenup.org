@@ -3,7 +3,6 @@ import { useState } from "react";
 import M from './Header.module.scss';
 
 import bough from '../../imgs/bough3.svg';
-// import cloud11 from '../../imgs/cloud11.svg';
 import cloud12 from '../../imgs/cloud12.svg';
 import lantern from '../../imgs/lantern.svg';
 import sakura1 from '../../imgs/sakura1.svg';

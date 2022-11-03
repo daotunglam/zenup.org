@@ -1,7 +1,5 @@
 import './section.scss';
-import SashimiTuna from '../../imgs/mealsLieferando/quality=90-max_weight=9500/dish_15.jpg';
-
-import { Stack } from '@mui/system';
+import SashimiTuna from '../../imgs/dish_15.jpg';
 
 export default function SectionLiebe() {
     return (

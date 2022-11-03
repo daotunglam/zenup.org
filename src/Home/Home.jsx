@@ -3,7 +3,7 @@ import M from './Home.module.scss';
 import Header from "./Header/Header";
 import meal_5 from '../imgs/Sushi/meal_5.jpeg';
 import sushiLongDish from '../imgs/Sushi/sushiLongDish.jfif';
-import SushiXeng_Hero from '../imgs/mealsLieferando/quality=90-max_weight=9500/SushiXeng_Hero_4x3.jpg';
+import SushiXeng_Hero from '../imgs/SushiXeng_Hero_4x3.jpg';
 import SectionWelcome from "./Sections/SectionWellcome";
 import SectionLiebe from "./Sections/SectionLiebe";
 import SectionKindsOfMeal from "./Sections/SectionKindsOfMeal";

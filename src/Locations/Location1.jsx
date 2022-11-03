@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import { useState, useEffect } from "react";
 import SectionMenu from '../Home/Sections/SectionMenu';
 import SectionKindsOfMeal from '../Home/Sections/SectionKindsOfMeal';
-import SushiXeng_Hero from '../imgs/mealsLieferando/quality=90-max_weight=9500/SushiXeng_Hero_4x3.jpg';
+import SushiXeng_Hero from '../imgs/SushiXeng_Hero_4x3.jpg';
 
 import Gallery from '../Gallery/Gallery';
 
