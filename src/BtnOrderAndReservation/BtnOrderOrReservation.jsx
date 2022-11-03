@@ -25,10 +25,10 @@ export default function BtnOrderOrReservation(props) {
             )}
         >
 
-            <Button variant="outlined" onClick={() => props.onClick('order')}>
+            <Button variant="outlined" sx={{ m: 0.5 }} onClick={() => props.onClick('order')}>
                 BESTELLUNG
             </Button>
-            <Button variant="outlined" onClick={() => props.onClick('reservation')}>
+            <Button variant="outlined" sx={{ m: 0.5 }} onClick={() => props.onClick('reservation')}>
                 TISCH RESERVIERUNG
             </Button>
 

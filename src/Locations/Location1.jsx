@@ -1,5 +1,4 @@
-import './Location.scss';
-import { isMobile } from 'react-device-detect';
+import './location.scss';
 import restaurantWithFish from '../imgs/restaurantWithFish.jpg';
 import RestaurantName from '../RestaurantName/RestaunrantName';
 import Button from '@mui/material/Button';
@@ -26,7 +25,6 @@ export default function Location1() {
 
     return (
         <div className='location'>
-            <div className={isMobile ? 'mobile' : 'desktop'}>
                 <img src={restaurantWithFish} className="bgImg headerLocation1" alt="restaurantWithFish" />
 
                 <div className='title'>
@@ -44,11 +42,11 @@ export default function Location1() {
                         showed && 'showed'
                     )}
                 >
-                    <Button >
+                    <Button variant='outlined' sx={{ m: 0.5 }}>
                         BESTELLUNG
                     </Button>
 
-                    <Button >
+                    <Button variant='outlined' sx={{ m: 0.5 }}>
                         TISCH RESERVIERUNG
                     </Button>
 
@@ -63,7 +61,6 @@ export default function Location1() {
 
                 <Gallery />
 
-            </div>
         </div>
     )
 }

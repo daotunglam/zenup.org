@@ -2,13 +2,17 @@ import './section.scss';
 import styles from './SectionKindsOfMeal.module.scss';
 import sushiBox from '../../imgs/Sushi/sushiBox.jfif';
 import sashimi from '../../imgs/Sushi/sashimi.jpeg';
-import skewer from '../../imgs/Sushi/meal_11.jpeg';
+import udon from '../../imgs/Sushi/meal_11.jpeg';
+
+import { Stack } from '@mui/system';
 
 export default function SectionKindsOfMeal() {
     return (
         <div className='section'>
-
-            <div className={styles.KindsOfMeal}>
+            <Stack
+                direction={{ xs: 'column', sm: 'row' }}
+                spacing={{ xs: 1, sm: 2, md: 4 }}
+            >
                 <div className={styles.item}>
                     <img src={sushiBox} alt="sushiBox" />
                     <span>S U S H I</span>
@@ -20,11 +24,10 @@ export default function SectionKindsOfMeal() {
                 </div>
 
                 <div className={styles.item}>
-                    <img src={skewer} alt="skewer" />
+                    <img src={udon} alt="udon" />
                     <span>U D O N</span>
                 </div>
-            </div>
-
-        </div>
+            </Stack >
+        </div >
     )
 }

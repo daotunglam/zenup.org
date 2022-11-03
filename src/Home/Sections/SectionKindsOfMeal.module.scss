@@ -1,14 +1,8 @@
-.KindsOfMeal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .item {
     width: 240px;
     height: 240px;
     position: relative;
-    margin: 24px;
 
     img {
         width: 100%;

@@ -1,0 +1,44 @@
+.Footer {
+    padding: 24px;
+    // background-color: rgb(70, 50, 50);
+    background-color: rgb(58 19 27);
+
+    * {
+        color: white;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    h4 {
+        text-align: center;
+        color: gold;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+.extra {
+    margin-top: 64px;
+}
+
+.socialLinks {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.gridTplCol200 {
+    display: grid;
+    // grid-gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 24px;
+}
+
+.webDeveloper {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+}

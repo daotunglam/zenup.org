@@ -1,4 +1,4 @@
-import './Location.scss';
+import './location.scss';
 import { isMobile } from 'react-device-detect';
 import restaurant from '../imgs/restaurant.jfif';
 import RestaurantName from '../RestaurantName/RestaunrantName';
