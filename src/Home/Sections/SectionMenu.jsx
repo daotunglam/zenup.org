@@ -41,15 +41,17 @@ export default function SectionMenu() {
     )
 
 
-    return <>
-        <div className={styles.SectionMenu}>
-            <div className={styles.title}>Unser Menü</div>
-            <div>
-                {renderMenuDemo}
-            </div>
-            <div className={styles.link}>
-                <Link to="/menu" >unser Menü ansehen</Link>
+    return (
+            <div className={styles.SectionMenu}>
+        <div className={styles.section}>
+                <div className={styles.title}>Unser Menü</div>
+                <div>
+                    {renderMenuDemo}
+                </div>
+                <div className={styles.link}>
+                    <Link to="/menu" >unser Menü ansehen</Link>
+                </div>
             </div>
         </div>
-    </>
+    )
 }

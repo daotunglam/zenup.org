@@ -10,6 +10,7 @@ import SectionKindsOfMeal from "./Sections/SectionKindsOfMeal";
 import SectionMenu from "./Sections/SectionMenu";
 import Gallery from "../Gallery/Gallery";
 import clsx from "clsx";
+import CallRoundedIcon from '@mui/icons-material/CallRounded';
 
 export default function Home() {
     return <>
@@ -22,6 +23,11 @@ export default function Home() {
                 <br />
                 <br />
                 Öffnungszeiten: Täglich 11-22 Uhr
+                <br />
+                <br />
+                <a href="tel:+498932795287">
+                    <CallRoundedIcon /> 089 3279 5287
+                </a>
             </h4>
 
             <h4>
@@ -29,6 +35,11 @@ export default function Home() {
                 <br />
                 <br />
                 Öffnungszeiten: Mo-Sa 11-22 Uhr
+                <br />
+                <br />
+                <a href="tel:+498994005677">
+                    <CallRoundedIcon /> 089 9400 5677
+                </a>
             </h4>
         </div>
 

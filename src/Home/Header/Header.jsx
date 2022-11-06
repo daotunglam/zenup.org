@@ -54,11 +54,11 @@ export default function Header() {
             <div className={M.sky}>
                 <div className={M.sun} />
 
-                <div className={M.cloud} style={{ left: 0.7*width, top: 0 }}>
+                <div className={M.cloud} style={{ left: 0.7 * width, top: 0 }}>
                     <img src={cloud12} alt="cloud" />
                 </div>
-                
-                <div className={M.cloud} style={{ right: 0.7*width, bottom: 0 }}>
+
+                <div className={M.cloud} style={{ right: 0.7 * width, bottom: 0 }}>
                     <img src={cloud12} alt="cloud" />
                 </div>
             </div>
