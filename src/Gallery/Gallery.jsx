@@ -1,21 +1,33 @@
-import styles from './Gallery.module.scss';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import M from './Gallery.module.scss';
+import { Carousel } from '3d-react-carousal';
+import useWindowDimensions from '../hooks/useWindowDimensions';
 
 export default function Gallery() {
 
-    
-    const renderImgs = [...Array(18)].map((_, i) =>
-        <div key={i}>
-            <img src={'imgs/mealsLieferando/quality=90-max_weight=9500/dish_' + (i + 1) + '.jpg'} />
-        </div>)
-        
+    const { width } = useWindowDimensions();
+
+    const renderImgs = [...Array(15)].map((_, i) =>
+        <img
+            key={i + 1}
+            src={'imgs/singleSushis/singleSushi_' + (i + 1) + '.jpeg'}
+            alt=""
+            style={{ 
+                objectFit: 'contain', 
+                height: (width > 600) ? '500px' : '300px',
+            }}
+        />
+    )
+
     return (
-        <div className={styles.Gallery} id="Gallery">
-            <div className={styles.carouselContainer}>
-                <Carousel className={styles.carousel} showIndicators={false}>
-                    {renderImgs}
-                </Carousel>
+        <div className={M.Gallery} id="Gallery">
+            <div className={M.carouselContainer}>
+                <Carousel
+                    className={M.carousel}
+                    slides={renderImgs}
+                    autoplay={true}
+                    interval={5000}
+                    arrows={false}
+                />
             </div>
         </div>
     )

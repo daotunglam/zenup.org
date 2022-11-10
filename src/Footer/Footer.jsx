@@ -69,11 +69,11 @@ export default function Footer() {
 
                 <div className={M.extra}>
                     <div className={M.socialLinks}>
-                        <a href="https://www.facebook.com/Xeng-Sushi-Munich-101711799305327" target="_blank">
-                            <FacebookIcon />
-                        </a>
                         <a href="https://instagram.com/sushi.xeng" target="_blank">
                             <InstagramIcon />
+                        </a>
+                        <a href="https://www.facebook.com/Xeng-Sushi-Munich-101711799305327" target="_blank">
+                            <FacebookIcon />
                         </a>
                         <a href="mailto:hello@sushixeng.de?subject=Hello!" target="_self">
                             <MailIcon />

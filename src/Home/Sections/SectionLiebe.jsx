@@ -1,5 +1,5 @@
 import './section.scss';
-import SashimiTuna from '../../imgs/dish_15.jpg';
+import SashimiTuna from '../../imgs/SushiXeng_Hero_4x3.jpg';
 
 export default function SectionLiebe() {
     return (

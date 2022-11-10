@@ -29,22 +29,22 @@
         object-fit: cover;
     }
 
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 1024px) {
         flex-direction: row;
         justify-content: space-around;
 
         .title {
-            width: 300px;
+            width: 480px;
             margin: 0;
         }
     
         .description {
-            width: 300px;
+            width: 480px;
             margin: 0;
         }
     
         img {
-            width: 300px;
+            width: 480px;
         }
     }
 

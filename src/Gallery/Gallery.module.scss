@@ -2,17 +2,18 @@
     scroll-margin-top: 100px;
     /*again scrolling to top:0*/
     background-color: white;
+
+    * {
+        box-shadow: none !important;
+    }
 }
 
 .carouselContainer {
     width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .carousel {
     max-width: 800px;
     width: 100%;
+    margin: 0 auto;
 }
