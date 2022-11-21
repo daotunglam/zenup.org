@@ -37,8 +37,6 @@ export default function Navbar() {
                 <Link
                     to="/location1"
                     className="navItem"
-                    target="_blank"
-                    rel="noreferrer"
                 >
                     <span>LOCATION 1</span>
                     <span className="sub">Augustenstraße 52</span>
@@ -47,20 +45,10 @@ export default function Navbar() {
                 <Link
                     to="/location2"
                     className="navItem"
-                    target="_blank"
-                    rel="noreferrer"
                 >
                     <span>LOCATION 2</span>
                     <span className="sub">Sendlinger Straße 7</span>
                 </Link>
-
-                <a
-                    href="#Gallery"
-                    className="navItem"
-                    rel="noreferrer"
-                >
-                    <span>GALLERY</span>
-                </a>
 
                 <Link to="/menu" className="navItem">MENU</Link>
             </div>

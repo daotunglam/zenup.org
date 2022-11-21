@@ -1,6 +1,7 @@
 {
   "name": "sushi-xeng",
   "version": "0.1.0",
+  "homepage": "htthttps://sushixeng.de/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

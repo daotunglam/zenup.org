@@ -11,7 +11,7 @@ export default function SectionKindsOfMeal() {
         <div className='section'>
             <Stack
                 direction={{ xs: 'column', sm: 'row' }}
-                spacing={{ xs: 1, sm: 2, md: 4 }}
+                spacing={{ xs: 2, sm: 3, md: 4 }}
             >
                 <div className={styles.item}>
                     <img src='imgs/coupleSushis/coupleSushi_3.jpeg' alt="sushiBox" />

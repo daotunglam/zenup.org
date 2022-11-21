@@ -6,7 +6,6 @@ import MailIcon from '@mui/icons-material/Mail';
 
 export default function Footer() {
     const location = useLocation();
-    const locationHome = (location.pathname === '/');
     const location1 = (location.pathname === '/location1');
     const location2 = (location.pathname === '/location2');
 
@@ -69,10 +68,10 @@ export default function Footer() {
 
                 <div className={M.extra}>
                     <div className={M.socialLinks}>
-                        <a href="https://instagram.com/sushi.xeng" target="_blank">
+                        <a href="https://instagram.com/sushi.xeng" target="_blank" rel="noreferrer">
                             <InstagramIcon />
                         </a>
-                        <a href="https://www.facebook.com/Xeng-Sushi-Munich-101711799305327" target="_blank">
+                        <a href="https://www.facebook.com/Xeng-Sushi-Munich-101711799305327" target="_blank" rel="noreferrer">
                             <FacebookIcon />
                         </a>
                         <a href="mailto:hello@sushixeng.de?subject=Hello!" target="_self">
