@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import './Menu.scss';
-import soupSalads from '../imgs/Menu/1.soupSalads.jpg';
-import starters from '../imgs/Menu/2.starters.jpg';
-import vorspeise from '../imgs/Menu/3.vorspeise.jpg';
-import specialrolls from '../imgs/Menu/4.specialrolls.jpg';
-import bowlsWarmdisches from '../imgs/Menu/5.bowlsWarmdisches.jpg';
-import sashimi from '../imgs/Menu/6.sashimi.jpg';
-import insideoutrolls from '../imgs/Menu/7.insideoutrolls.jpg';
-import sushisets from '../imgs/Menu/8.sushisets.jpg';
-import tortillas from '../imgs/Menu/9.tortillas.jpg';
-import crunchy from '../imgs/Menu/10.crunchy.jpg';
-import drinks from '../imgs/Menu/11.drinks.jpg';
-import final from '../imgs/Menu/12.final.jpg';
+import soupSalads from './MenuImgs/1.soupSalads.jpg';
+import starters from './MenuImgs/2.starters.jpg';
+import vorspeise from './MenuImgs/3.vorspeise.jpg';
+import specialrolls from './MenuImgs/4.specialrolls.jpg';
+import bowlsWarmdisches from './MenuImgs/5.bowlsWarmdisches.jpg';
+import sashimi from './MenuImgs/6.sashimi.jpg';
+import insideoutrolls from './MenuImgs/7.insideoutrolls.jpg';
+import sushisets from './MenuImgs/8.sushisets.jpg';
+import tortillas from './MenuImgs/9.tortillas.jpg';
+import crunchy from './MenuImgs/10.crunchy.jpg';
+import drinks from './MenuImgs/11.drinks.jpg';
+import final from './MenuImgs/12.final.jpg';
 
 export default function Menu() {
     const [largeMenuPage, setLargeMenuPage] = useState(null);

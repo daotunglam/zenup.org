@@ -1,7 +1,7 @@
 import React from "react";
 import M from './Home.module.scss';
 import Header from "./Header/Header";
-import sushiLongDish from '../imgs/Sushi/sushiLongDish.jfif';
+import sushiLongDish from '../imgs/sushiLongDish.png';
 import SectionWelcome from "./Sections/SectionWellcome";
 import SectionLiebe from "./Sections/SectionLiebe";
 import SectionKindsOfMeal from "./Sections/SectionKindsOfMeal";
@@ -43,7 +43,7 @@ export default function Home() {
 
         <Gallery />
 
-        <img src='imgs/singleSushis/singleSushi_11.jpeg' className={M.bgImg} alt="meal_5" />
+        <img src='imgs/singleSushis/singleSushi_11.jpeg' className={M.bgImg} alt="" />
 
         <SectionWelcome />
 
@@ -53,7 +53,7 @@ export default function Home() {
 
         <SectionMenu />
 
-        <img src='imgs/singleSushis/singleSushi_13.jpeg' className={M.bgImg} alt="SushiXeng_Hero" />
+        <img src='imgs/singleSushis/singleSushi_13.jpeg' className={M.bgImg} alt="" />
 
         <SectionLiebe />
     </>

@@ -9,6 +9,7 @@ import SectionMenu from '../Home/Sections/SectionMenu';
 import SectionKindsOfMeal from '../Home/Sections/SectionKindsOfMeal';
 import restaurantWall from '../imgs/restaurantWall.jfif';
 import Gallery from '../Gallery/Gallery';
+import CallRoundedIcon from '@mui/icons-material/CallRounded';
 
 export default function Location2() {
 
@@ -31,36 +32,42 @@ export default function Location2() {
                 <div className='title'>
                     <RestaurantName />
                     <div className='locationName'>
-                        <h3>LOCATION 2 <br /> in ANGER BLOCK INNENHOF</h3>
+                        <h1>LOCATION 2</h1>
+                        <h4>in ANGER BLOCK INNENHOF</h4>
                         <h4>Sendlinger Straße 7 80331 München</h4>
+                        <h4>
+                            <a href="tel:+498994005677">
+                                <CallRoundedIcon /> 089 9400 5677
+                            </a>
+                        </h4>
                     </div>
                 </div>
+                {showed &&
+                    <div
+                        className={clsx(
+                            'BtnOrderOrReservation',
+                            onSite && 'onSite',
+                            showed && 'showed'
+                        )}
+                    >
+                        <Button >
+                            BESTELLUNG
+                        </Button>
 
-                <div
-                    className={clsx(
-                        'BtnOrderOrReservation',
-                        onSite && 'onSite',
-                        showed && 'showed'
-                    )}
-                >
-                    <Button >
-                        BESTELLUNG
-                    </Button>
+                        <Button >
+                            TISCH RESERVIERUNG
+                        </Button>
 
-                    <Button >
-                        TISCH RESERVIERUNG
-                    </Button>
-
-                    <span className="toggler" onClick={() => setShowed(!showed)} >||</span>
-                </div>
-
+                        <span className="toggler" onClick={() => setShowed(!showed)} >||</span>
+                    </div>
+                }
                 <SectionMenu />
 
                 <img src={restaurantWall} className='bgImg' alt="restaurant" />
 
                 <SectionKindsOfMeal />
 
-                
+
                 <Gallery />
 
             </div>

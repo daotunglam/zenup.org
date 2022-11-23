@@ -1,10 +1,9 @@
 import './section.scss';
 import styles from './SectionKindsOfMeal.module.scss';
-// import sushiBox from '../../imgs/Sushi/sushiBox.jfif';
-// import sashimi from '../../imgs/Sushi/sashimi.jpeg';
-import udon from '../../imgs/Sushi/meal_11.jpeg';
+import udon from '../../imgs/udon.jpeg';
 
 import { Stack } from '@mui/system';
+import { Link } from "react-router-dom";
 
 export default function SectionKindsOfMeal() {
     return (
@@ -13,23 +12,23 @@ export default function SectionKindsOfMeal() {
                 direction={{ xs: 'column', sm: 'row' }}
                 spacing={{ xs: 2, sm: 3, md: 4 }}
             >
-                <div className={styles.item}>
+                <Link to="/sushis" className={styles.item}>
                     <img src='imgs/coupleSushis/coupleSushi_3.jpeg' alt="sushiBox" />
                     <span>S U S H I</span>
-                </div>
+                </Link>
 
-                <div className={styles.item}>
+                <Link to="/sashimis" className={styles.item}>
                     <img src='imgs/coupleSushis/coupleSushi_2.jpeg' alt="sashimi" />
                     <span>S A S I M I</span>
-                </div>
+                </Link>
 
-                <div className={styles.item}>
+                <Link to="/bowls" className={styles.item}>
                     <img
                         // src='imgs/coupleSushis/coupleSushi_4.jpeg' 
                         src={udon}
                         alt="udon" />
-                    <span>U D O N</span>
-                </div>
+                    <span>B O W L</span>
+                </Link>
             </Stack >
         </div >
     )
