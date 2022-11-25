@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ScrollToTop from "../scrollToTop";
 import './galleryPages.scss';
 
 export default function Sashimis() {
@@ -16,6 +17,7 @@ export default function Sashimis() {
     )
 
     return <>
+        <ScrollToTop />
         <div className="galleryPages">
 
             <Carousel

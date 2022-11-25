@@ -12,6 +12,7 @@ import tortillas from './MenuImgs/9.tortillas.jpg';
 import crunchy from './MenuImgs/10.crunchy.jpg';
 import drinks from './MenuImgs/11.drinks.jpg';
 import final from './MenuImgs/12.final.jpg';
+import ScrollToTop from "../scrollToTop";
 
 export default function Menu() {
     const [largeMenuPage, setLargeMenuPage] = useState(null);
@@ -32,17 +33,18 @@ export default function Menu() {
     ]
 
     const rendermenuPages = menuPages.map((menuPage, i) =>
-        <img key={i} className="menuPage" src={menuPage} alt='menuPage' onClick={()=>setLargeMenuPage(menuPage)} />
+        <img key={i} className="menuPage" src={menuPage} alt='menuPage' onClick={() => setLargeMenuPage(menuPage)} />
     )
 
     return <>
+        <ScrollToTop />
         <div className="Menu">
 
             {rendermenuPages}
 
             {largeMenuPage &&
                 <div className="large">
-                    <div className="overlay" onClick={()=>setLargeMenuPage(null)} />
+                    <div className="overlay" onClick={() => setLargeMenuPage(null)} />
                     <img src={largeMenuPage} alt='page' />
                 </div>
             }
