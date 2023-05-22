@@ -1,10 +1,13 @@
 .Footer {
     padding: 24px;
-    // background-color: rgb(70, 50, 50);
-    background-color: rgb(58 19 27);
+    background-image: url(../../public/imgs/Background_footer.png);
+
+    &.includeBgColor {
+        background-color: rgba(148, 166, 165, 0.9);
+    }
 
     * {
-        color: white;
+        color: white !important;
     }
 
     .section {
@@ -12,17 +15,8 @@
         margin: 0 auto;
     }
 
-    h2 {
-        text-align: center;
-    }
-
     h4 {
         text-align: center;
-        color: gold;
-    }
-
-    iframe {
-        width: 100%;
     }
 }
 
@@ -31,9 +25,10 @@
 }
 
 .socialLinks {
-    display: flex;
-    width: 200px;
-    justify-content: space-between;
+    display: grid;
+    justify-content: start;
+    grid-auto-flow: column;
+    grid-gap: 10px;
 }
 
 .gridTplCol200 {
@@ -41,9 +36,4 @@
     // grid-gap: 16px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin-top: 24px;
-}
-
-.webDeveloper {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 12px;
 }

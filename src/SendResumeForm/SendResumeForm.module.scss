@@ -1,0 +1,87 @@
+.SendResumeForm {
+    color: white;
+    width: 100%;
+
+    input,
+    textarea {
+        width: 280px;
+        padding: 12px 20px;
+        display: block;
+        box-sizing: border-box;
+        background-color: transparent;
+        color: white;
+    }
+
+    label {
+        width: 280px;
+        display: block;
+        margin-top: 40px;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    textarea {
+        border: 1px solid #ccc;
+        margin-top: 16px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+        }
+    }
+
+    .message {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .uploadBtn {
+        width: 60px;
+        height: 50px;
+        background-image: url(../../public/imgs/WorkWithUs/UploadBtn.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        cursor: pointer;
+        margin-top: 16px;
+    }
+
+    .uploadBtn input[type="file"] {
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    button {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border: none;
+        background-color: transparent;
+        color: #94A6A5;
+        font-size: 20px;
+        padding: 16px;
+
+        background-image: url(../../public/imgs/ContactUs/SubmitBtn.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        cursor: pointer;
+
+        &:hover {
+            color: #3C7CA8;
+        }
+
+        &:focus,
+        &:active {
+            color: green;
+        }
+    }
+
+
+}

@@ -1,0 +1,174 @@
+.bgImg {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #ADAA93;
+    z-index: -1;
+
+    img {
+        object-fit: contain;
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+
+        &.backgroundLeft {
+            left: 0;
+        }
+
+        &.backgroundRight {
+            right: 0;
+        }
+    }
+}
+
+.contentBox {
+    width: 90%;
+    margin: auto;
+    color: white;
+
+    &>.section {
+        @media screen and (min-width: 769px) {
+            height: 100vh;
+            max-height: 768px;
+        }
+
+        @media screen and (max-height: 480px) and (orientation : landscape) {
+            height: fit-content;
+            min-height: 100vh;
+        }
+
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 100px;
+    }
+}
+
+.header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../public/imgs/Explore/desktop/exploreHeader.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.zenupGallery {
+    .imgContainer {
+        width: 50%;
+    
+        @media screen and (max-width: 480px) {
+            width: 100%;
+        }
+    
+        max-height: 550px;
+        overflow: hidden;
+        float: left;
+        margin-right: 20px;
+    
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    
+        // make grid group images:
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+
+        .img4 {
+            grid-area: img4;
+        }
+
+        .img5 {
+            grid-area: img5;
+        }
+
+        display: grid;
+        grid-template-areas: 'img1 img2 img2'
+        'img1 img2 img2'
+        'img3 img2 img2'
+        'img4 img5 img5'
+        'img4 img5 img5';
+        gap: 10px;
+
+    }
+
+    .textContainer {
+        text-align: justify;
+    
+        .title {
+            font-size: 60px;
+    
+            @media screen and (max-width: 480px) {
+                font-size: 48px;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+.blogs {
+    height: fit-content !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1024px;
+    text-align: center;
+    margin: auto;
+
+    .CTA_button {
+        font-size: 32px;
+        color: #94A6A5;
+        padding: 20px 48px;
+        white-space: nowrap;
+        background-image: url(../../public/imgs/Explore/desktop/Blog_button.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        cursor: pointer;
+
+        &:hover {
+            color: #3C7CA8;
+        }
+
+        &:focus,
+        &:active {
+            color: green;
+        }
+    }
+
+    .text {
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        background-image: url(../../public/imgs/Explore/mobile/exploreHeader.png);
+        background-size: 70%;
+    }
+
+    .zenupGallery {
+        .imgContainer{
+            grid-template-areas:
+            "img5 img2"
+            "img4 img3";
+        }
+    }
+
+    .blogs {
+        height: 50vh !important;
+        justify-content: center;
+    }
+}

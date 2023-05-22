@@ -1,13 +1,12 @@
-import React from "react";
+ import React from "react";
+ import M from './Logo.module.scss';
 
-import M from './Logo.module.scss';
-import logo from "../imgs/logo.svg";
-
-export default function Logo() {
+ export default function Logo({ theme }) {
+    const logoImg = theme === 'dark' ? 'imgs/logoBlack1.png' : 'imgs/logoWhite1.png';
     return (
         <div className={M.Logo}>
             <div>
-                <img src={logo} alt="logo" />
+                <img src={logoImg} alt="logo" />
             </div>
         </div>
     )

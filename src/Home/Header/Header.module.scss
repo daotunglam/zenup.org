@@ -1,125 +1,99 @@
 .Header {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #94a6a5;
 
-    // background: -webkit-linear-gradient(to bottom, #aed0a6, #271827);
-    // background: linear-gradient(to bottom, #aed0a6, #271827);
-    
-    // background: -webkit-linear-gradient(to top right, rgba(0, 0, 0, 1) 5%, rgba(64, 109, 142, 0.9) 70%, rgba(64, 109, 142, 0.7) 80%, rgba(255, 215, 0, 0.1));
-    // background: linear-gradient(to top right, rgba(0, 0, 0, 1) 5%, rgba(64, 109, 142, 0.9) 70%, rgba(64, 109, 142, 0.7) 80%, rgba(255, 215, 0, 0.1));
-    
-    // background: linear-gradient(to bottom, #d4d7d9 10%, #373737, #312a06, #000000);
-    // background: linear-gradient(to bottom, #d4d7d9 10%, #373737, #312a06, #000000);
-
-    background: -webkit-linear-gradient(to top right, rgb(0, 0, 0) 5%, rgb(78 49 54) 50%, rgb(174 34 62) 80%, rgba(255, 215, 0, 0.1));
-    background: linear-gradient(to top right, rgb(0, 0, 0) 5%, rgb(78 49 54) 50%, rgb(174 34 62) 80%, rgba(255, 215, 0, 0.1));
-}
-
-.sky {
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    width: 100%;
-    height: 200px;
-}
-
-.sun {
-    position: absolute;
-    transform: translateX(-50%);
-    top: 0;
-    left: 40%;
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    box-shadow: 4px 4px 4px black;
-    // background-color: white;
-}
-
-.cloud {
-    position: absolute;
-    width: 150px;
-
-    img {
-        width: 100%;
-    }
-}
-
-.tree {
+  .slide1 {
+    height: calc(100% - 100px);
     position: absolute;
     top: 100px;
-}
-
-.bough {
-    position: absolute;
-    top: 0;
     left: 0;
-    width: 320px;
-    height: 200px;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    color: #94A6A5;
 
-    img {
-        width: 100%;
-    }
-}
-
-.flower {
-    position: absolute;
-    width: 16px;
-    animation: bloom 1s ease-in-out;
-
-    img {
-        width: 100%;
-    }
-}
-
-@keyframes bloom {
-    0% {
-        width: 0
+    .bgImg {
+      position: absolute;
+      top: 100px;
+      right: 80px;
+      bottom: 0;
+      width: 100%;
+      background: url(../../../public/imgs/bonghoaHeader.svg) no-repeat;
+      background-size: contain;
+      background-position: bottom right;
     }
 
-    100% {
-        width: 16px
+    .text {
+      position: absolute;
+      top: 100px;
+      left: 80px;
+      bottom: 0;
+
+      .main {
+        font-size: 6rem;
+        line-height: 1.25;
+        font-weight: 600;
+      }
+
+      .sub {
+        font-size: 2.5rem;
+      }
     }
-}
+  }
 
-.lantern {
-    position: absolute;
-    height: 200px;
+  @media screen and (max-width: 768px) {
+    .slide1 {
+      .bgImg {
+        background: url(../../../public/imgs/bonghoaHeaderMobile.svg) no-repeat;
+        background-position: bottom;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
 
-    img {
-        height: 100%;
+      .text {
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 1.5rem;
+
+        .main {
+          font-size: 5rem;
+          line-height: 1.25;
+          padding: 24px 0;
+        }
+
+        .sub {
+          font-size: 2rem;
+        }
+      }
     }
-}
+  }
 
-.title {
-    position: absolute;
-    bottom: 200px;
-    right: 30px;
-}
+  @media screen and (max-width: 480px) {
+    .slide1 {
 
+      .text {
 
-@media only screen and (min-width: 600px) {
+        .main {
+          font-size: 48px;
+          line-height: 1.25;
+          font-weight: 600;
+          padding: 24px 0;
+        }
 
-    .sky {
-        height: 400px;
+        .sub {
+          font-size: 20px;
+        }
+      }
     }
+  }
 
-    .sun {
-        width: 400px;
-        height: 400px;
-    }
+  @media screen and (max-height: 480px) and (orientation : landscape) {}
 
-    .bough {
-        width: 500px;
-        height: 300px;
-    }
 
-    .lantern {
-        height: 300px;
-    }
-
-    .title {
-        right: 20%;
-    }
 }

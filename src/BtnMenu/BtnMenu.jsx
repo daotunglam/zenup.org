@@ -1,17 +1,13 @@
 import React from "react";
 import "./BtnMenu.scss";
-import clsx from "clsx";
 
-
-export default function BtnMenu({ toggleNavbar, NavbarOpened }) {
+export default function BtnMenu({toggleNavbar}) {
   return (
     <div
-      className={clsx('wrapperMenu', NavbarOpened && 'opened')}
+      className='hamburgerBtn'
       onClick={() => { toggleNavbar() }}
     >
-      <div className="line-menu half start" />
-      <div className="line-menu" />
-      <div className="line-menu half end" />
+      <img src='imgs/hamburgerBtn.png' alt="hamburgerBtn" />
     </div>
   )
 

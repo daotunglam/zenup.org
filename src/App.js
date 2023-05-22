@@ -1,41 +1,55 @@
 import './App.scss';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import { useRef } from 'react';
+// import useIsInViewport from "./hooks/useIsInViewport";
 
 import Navbar from './Navbar/Navbar';
 import Home from './Home/Home';
-import Menu from './Menu/Menu';
-import Sushis from './galleryPages/Sushis';
-import Sashimis from './galleryPages/Sashimis';
-import Bowls from './galleryPages/Bowls';
 import BtnGoTop from './BtnGoTop/BtnGoTop';
 import Footer from './Footer/Footer';
-import Imprint from './Imprint';
-import Location1 from './Locations/Location1';
-import Location2 from './Locations/Location2';
+import Explore from './Explore/Explore';
+import Categories from './Categories/Categories';
+import ContactUs from './ContactUs/ContactUs';
+import WorkWithUs from './WorkWithUs/WorkWithUs';
+import ZenupWorkshops from './Categories/ZenupWorkshops';
+import ZenJournaling from './Categories/ZenJournaling';
+import ZenMerchandise from './Categories/ZenMerchandise';
+import ZenupLifestyles from './Categories/ZenupLifestyles';
+import MindfulnessExercises from './Categories/MindfulnessExercises';
+// import ContactBtn from "./ContactBtn/ContactBtn";
 
 function App() {
+  const footerRef = useRef();
+  // const isFooterInViewport = useIsInViewport(footerRef);
+
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="menu" element={<Menu />} />
-          <Route path="sushis" element={<Sushis />} />
-          <Route path="sashimis" element={<Sashimis />} />
-          <Route path="bowls" element={<Bowls />} />
-          <Route path="location1" element={<Location1 />} />
-          <Route path="location2" element={<Location2 />} />
-          <Route path="imprint" element={<Imprint />} />
+          <Route path="explore" element={<Explore />} />
+          <Route path="categories" element={<Categories />} />
+          <Route path="zenup-workshops" element={<ZenupWorkshops />} />
+          <Route path="zen-journaling" element={<ZenJournaling />} />
+          <Route path="zen-merchandise" element={<ZenMerchandise />} />
+          <Route path="zenup-lifestyles" element={<ZenupLifestyles />} />
+          <Route path="mindfulness-exercises" element={<MindfulnessExercises />} />
+          <Route path="contact-us" element={<ContactUs />} />
+          <Route path="work-with-us" element={<WorkWithUs />} />
         </Routes>
 
-        <Footer />
-
+        <div ref={footerRef}>
+          <Footer />
+        </div>
+        
         <BtnGoTop />
 
         <Navbar />
 
-      </BrowserRouter>
+        {/* {!isFooterInViewport && <ContactBtn />} */}
+
+      </HashRouter>
     </div>
   );
 }

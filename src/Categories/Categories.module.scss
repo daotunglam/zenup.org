@@ -1,0 +1,228 @@
+.contentBox {
+    width: 90%;
+    margin: auto;
+    color: white;
+}
+
+a {
+    color: white;
+
+    &:hover {
+        color: #3C7CA8;
+        text-shadow: 0 0 8px white;
+    }
+
+    &:focus,
+    &:active {
+        color: #94A6A5;
+        text-shadow: 0 0 8px white;
+    }
+}
+
+.scrollSnapVerticalContainer {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+
+    &::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar for Chrome, Safari and Opera */
+    }
+
+    /* Hide scrollbar for IE and Edge */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    .snapItem {
+        width: 100%;
+        height: 100vh;
+        scroll-snap-align: center;
+        /* Scroll Snap */
+    }
+}
+
+.phone {
+    .background {
+        z-index: -1;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+
+        background-color: #3C7CA8;
+        background-image: url(../../public/imgs/Categories/background_singleLief_noBG.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .scrollSection {
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.2;
+            padding: 16px;
+        }
+    }
+}
+
+.desktop {
+    .background {
+        width: 100%;
+        height: 100vh;
+        background-color: #3C7CA8;
+        position: fixed;
+        z-index: -1;
+    }
+
+    .box {
+        height: 100vh;
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    .column {
+        height: 100%;
+        position: relative;
+
+        .background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .title {
+                font-size: 2rem;
+                font-weight: bold;
+                text-align: center;
+                line-height: 1.2;
+                padding: 16px;
+            }
+
+            img {
+                width: 80%;
+            }
+
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+
+        .dropAndBound {
+
+            animation-name: fallAnimation;
+            animation-duration: 2s; // Thời gian thực hiện animation
+            //animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); // Điều chỉnh đường cong tốc độ
+
+            @keyframes fallAnimation {
+                0% {
+                    transform: translate(-50%, -100%); // Bắt đầu từ vị trí ẩn
+                    left: 50%;
+                    opacity: 0; // Bắt đầu với độ mờ là 0
+                }
+
+                5% {
+                    transform: translate(-50%, 70%); // Rơi nhanh xuống
+                    opacity: 1; // Hiển thị đầy đủ
+                }
+
+                15% {
+                    transform: translate(-50%, -50%);
+                }
+
+                25% {
+                    transform: translate(-50%, 20%); // Rơi
+                }
+
+                40% {
+                    transform: translate(-50%, -16%);
+                }
+
+                60% {
+                    transform: translate(-50%, 6%); // Rơi
+                }
+
+                84% {
+                    transform: translate(-50%, -4%);
+                }
+
+                92% {
+                    transform: translate(-50%, 2%); // Rơi
+                }
+
+                100% {
+                    transform: translate(-50%, 0); // dừng lại
+                    left: 50%;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:nth-child(1) {
+            .content {
+                top: 25%;
+            }
+            .dropAndBound{
+                animation-duration: 1s; // Thời gian thực hiện animation
+            }
+        }
+
+        &:nth-child(2) {
+            .content {
+                top: 63%;
+            }
+            .dropAndBound{
+                animation-duration: 2s; // Thời gian thực hiện animation
+            }
+        }
+
+        &:nth-child(3) {
+            .content {
+                top: 25%;
+            }
+            .dropAndBound{
+                animation-duration: 3s; // Thời gian thực hiện animation
+            }
+        }
+
+        &:nth-child(4) {
+            .content {
+                top: 63%;
+            }
+            .dropAndBound{
+                animation-duration: 1.5s; // Thời gian thực hiện animation
+            }
+        }
+
+        &:nth-child(5) {
+            .content {
+                top: 25%;
+            }
+            .dropAndBound{
+                animation-duration: 2.5s; // Thời gian thực hiện animation
+            }
+        }
+
+    }
+
+}

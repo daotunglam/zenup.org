@@ -1,93 +1,117 @@
 import M from './Footer.module.scss';
-import { Link, useLocation } from 'react-router-dom';
+import {
+    Link,
+    useLocation
+} from 'react-router-dom';
+
+import clsx from 'clsx';
+
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import MailIcon from '@mui/icons-material/Mail';
+import Logo from '../Logo/Logo';
+import CallIcon from '@mui/icons-material/Call';
+
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+// import ListItemText from '@mui/material/ListItemText';
 
 export default function Footer() {
     const location = useLocation();
-    const location1 = (location.pathname === '/location1');
-    const location2 = (location.pathname === '/location2');
 
     return (
-        <div className={M.Footer}>
+        <div
+            className={M.Footer + (location.pathname == '/' ? ' ' + M.includeBgColor : '')}
+        >
+            <div style={{
+                height: '1px',
+                backgroundColor: 'rgba(245, 245, 245, 0.5)',
+                boxShadow: '0 1px gray'
+            }} />
+
             <div className={M.section}>
 
-                <h2>BESUCHEN SIE UNS IN</h2>
+                <div className={M.gridTplCol200}>
 
-                {!location2 &&
-                    <div className={M.gridTplCol200}>
+                    <List>
+                        <ListItem>
 
-                        <h4>SUSHI XENG <br/> IN <br /> MAXVORSTADT</h4>
+                            <ListItemAvatar>
+                                <Logo theme='white' />
+                            </ListItemAvatar>
 
-                        <div>
-                            <p>
-                                <a href="https://goo.gl/maps/gGiL3kM1sux7AA3X9">
-                                    Augustenstraße 52 80333 München
-                                </a>
-                            </p>
-                            <p>Öffnungszeiten: Täglich 11-22 Uhr</p>
-                            <p>
-                                <a href="tel:+498932795287">
-                                    Tel: 089 3279 5287
-                                </a>
-                            </p>
-                        </div>
+                            {/* <ListItemText
+                                primary='Zen Up UG'
+                                secondary='The masterkey to self awareness'
+                            /> */}
 
-                        <iframe
-                            title='googleMapAugustenstraße'
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5324.06050369877!2d11.562651!3d48.148222!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e7514eed8b677%3A0x5dc88c3d3305e8e!2sSushi%20Xeng%20by%20Geisha!5e0!3m2!1sde!2sde!4v1666950677271!5m2!1sde!2sde"
-                            loading="lazy"></iframe>
+                        </ListItem>
+                    </List>
+
+                    <div>
+                        {/* <p>
+                            <a href="#" target="_blank" rel="noreferrer">
+                                Newsletter
+                            </a>
+                        </p> */}
+                        <p>
+                            <a href="#" target="_blank" rel="noreferrer">
+                                FAQ
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#" target="_blank" rel="noreferrer">
+                                Terms & Services
+                            </a>
+                        </p>
                     </div>
-                }
 
-                {!location1 &&
-                    <div className={M.gridTplCol200}>
-                        <h4>SUSHI XENG <br/> IN <br /> ANGER BLOCK INNENHOF</h4>
+                </div>
 
-                        <div>
-                            <p>
-                                <a href="https://goo.gl/maps/gGiL3kM1sux7AA3X9">
-                                    Sendlinger Straße 7 80331 München
-                                </a>
-                            </p>
-                            <p>Öffnungszeiten: Mo-Sa 11-22 Uhr</p>
-                            <p>
-                                <a href="tel:+498994005677">
-                                    Tel: 089 9400 5677
-                                </a>
-                            </p>
-                        </div>
-
-                        <iframe
-                            title='googleMapAugustenstraße'
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.681962623642!2d11.570269416251902!3d48.13565635927274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75757e8bebe9%3A0x8cd355e6dc6b450!2sSushi%20Xeng%20by%20Geisha!5e0!3m2!1sde!2sde!4v1663362397968!5m2!1sde!2sde"
-                            loading="lazy"></iframe>
-                    </div>
-                }
-
-                <div className={M.extra}>
+                <div className={clsx(M.extra, M.gridTplCol200)}>
                     <div className={M.socialLinks}>
-                        <a href="https://instagram.com/sushi.xeng" target="_blank" rel="noreferrer">
-                            <InstagramIcon />
-                        </a>
-                        <a href="https://www.facebook.com/Xeng-Sushi-Munich-101711799305327" target="_blank" rel="noreferrer">
-                            <FacebookIcon />
-                        </a>
-                        <a href="mailto:hello@sushixeng.de?subject=Hello!" target="_self">
+                        <a
+                            target="_self"
+                            href="mailto:hello@zenup.org"
+                        >
                             <MailIcon />
                         </a>
+                        {/* <a
+                            target="_blank" rel="noreferrer"
+                            href="#"
+                        >
+                            <FacebookIcon />
+                        </a> */}
+                        <a
+                            target="_blank" rel="noreferrer"
+                            href="https://www.instagram.com/nauanddandie/"
+                        >
+                            <InstagramIcon />
+                        </a>
+                        {/* <a
+                            target="_blank" rel="noreferrer"
+                            href="#"
+                        >
+                            <YouTubeIcon />
+                        </a> */}
+                        {/* <a
+                            target="_self"
+                            href="mailto:hello@zenup.org"
+                        >
+                            <CallIcon />
+                        </a> */}
                     </div>
 
-                    <p>
-                        <Link to="imprint" >Impressum</Link>
-                    </p>
-                    <p>
-                        <a className={M.webDeveloper} href="https://tunglam-dao.com.de">Web Developer tunglamdao</a>
-                    </p>
+                    {/* <div>
+                        <Link to="imprint" >Imprint</Link>
+                        {' | '}
+                        <Link to="privacy-policy" >Privacy policy </Link>
+                    </div> */}
                 </div>
 
             </div>
-        </div>
+        </div >
     )
 }

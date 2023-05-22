@@ -9,7 +9,7 @@ export default function Sashimis() {
     const renderImgs = [...Array(4)].map((_, i) =>
         <div key={i + 1}>
             <img
-                src={'imgs/SashimisImgs/sashimi_' + (i + 1) + '.jpg'}
+                src={'imgs/SashimisImgs/sashimi_0' + (i + 1) + '.jpg'}
                 alt=""
             />
             {/* <p className="legend">{i + 1}</p> */}

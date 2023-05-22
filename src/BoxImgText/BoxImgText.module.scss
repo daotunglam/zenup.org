@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+}
+
+.imgContainer {
+    max-height: 550px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+.textContainer {
+    text-align: justify;
+
+    .title {
+        font-size: 60px;
+
+        @media screen and (max-width: 480px) {
+            font-size: 48px;
+            // line-height: 2;
+        }
+    }
+}
