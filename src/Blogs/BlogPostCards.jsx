@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../Card/Card';
-import { Popover, Typography } from '@mui/material';
+import M from './BlogPostCards.module.scss';
 
 export default function BlogPostCards() {
   const [blogData, setBlogData] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
-  const [selectedBlog, setSelectedBlog] = useState(null);
+  const [selectedBlogIndex, setSelectedBlogIndex] = useState(null);
 
   useEffect(() => {
     // Fetch the JSON data
@@ -19,63 +19,32 @@ export default function BlogPostCards() {
     return <div>Loading...</div>;
   }
 
-  const handleCardClick = (event, blog) => {
-    setAnchorEl(event.currentTarget);
-    setSelectedBlog(blog);
-  };
-
-  const handlePopoverClose = () => {
-    setAnchorEl(null);
-    setSelectedBlog(null);
+  const handleCardClick = blogIndex => {
+    setSelectedBlogIndex(blogIndex);
   };
 
   const handleClosePopover = () => {
-    setSelectedBlog(null);
+    setAnchorEl(null);
+    setSelectedBlogIndex(null);
+  };
+
+  const handlePrevBlog = () => {
+    setSelectedBlogIndex(prevIndex => prevIndex - 1);
+  };
+
+  const handleNextBlog = () => {
+    setSelectedBlogIndex(prevIndex => prevIndex + 1);
   };
 
   const open = Boolean(anchorEl);
 
-  const popoverStyle = {
-    position: 'fixed',
-    top: '50%',
-    transform: 'translate(-50%,-50%)',
-    left: '50%',
-    width: '90vw',
-    maxwidth: '1024px',
-    height: '90dvh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: 'white',
-    zIndex: 999,
-  };
-
-  const popoverOverlay = {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    background: 'transparent',
-    // zIndex: '-1',
-  }
-
-  const iframeStyle = {
-    border: 'none',
-    width: '100%',
-    height: '100%',
-    padding: '16px',
-    boxSizing: 'border-box',
-    overflow: 'hidden'
-  };
-
   return (
     <>
-      <div style={{ display: 'grid', gridGap: '16px', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
-        {blogData.map(blog => (
+      <div className={M.blogPostCardsContainer}>
+        {blogData.map((blog, index) => (
           <div
             key={blog.id}
-            onClick={(event) => handleCardClick(event, blog)}
+            onClick={() => handleCardClick(index)}
           >
             <Card
               date={blog.date}
@@ -88,15 +57,32 @@ export default function BlogPostCards() {
         ))}
       </div>
 
-      {selectedBlog && (
+      {selectedBlogIndex !== null && (
         <>
-          <div className='popoverOverlay' style={popoverOverlay} onClick={handleClosePopover} />
-          <div style={popoverStyle}>
+          <div className={M.popoverOverlay} onClick={handleClosePopover} />
+          
+          <div className={M.popoverContainer}>
             <iframe
-              src={selectedBlog.url}
+              className={M.iframe}
+              src={blogData[selectedBlogIndex].url}
               title="Website"
-              style={iframeStyle}
             />
+            <div className={M.navButtons}>
+              <button
+                className={M.prevButton}
+                onClick={handlePrevBlog}
+                disabled={selectedBlogIndex === 0}
+              >
+                ‹
+              </button>
+              <button
+                className={M.nextButton}
+                onClick={handleNextBlog}
+                disabled={selectedBlogIndex === blogData.length - 1}
+              >
+                ›
+              </button>
+            </div>
           </div>
         </>
       )}
@@ -104,8 +90,3 @@ export default function BlogPostCards() {
   );
 }
 
-{/* <Typography variant="h6">{selectedBlog.title}</Typography>
-            <Typography variant="subtitle1">{selectedBlog.date}</Typography>
-            <img src={selectedBlog.featuredImage} alt="Blog Post" style={{ maxWidth: '100%', marginBottom: '8px' }} />
-            <Typography variant="body1">{selectedBlog.content}</Typography>
-            <Typography variant="subtitle2">{selectedBlog.author}</Typography> */}

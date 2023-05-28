@@ -1,0 +1,57 @@
+.blogPostCardsContainer {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.popoverContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 1024px;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    z-index: 999;
+}
+
+.iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navButtons {
+    text-align: center;
+    margin-top: 8px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.prevButton,
+.nextButton {
+    margin-right: 8px;
+    padding: 0 20px 4px;
+    font-size: 32px;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(245,245,245,0.2);
+}
+
+.popoverOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    // zIndex: '-1';
+}
