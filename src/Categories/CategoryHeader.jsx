@@ -12,6 +12,8 @@ export default function CategoryHeader({ title, imgFolder }) {
         paddingTop: '100px',
         boxSizing: 'border-box',
         display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-around',
         overflow: 'hidden',
     };
 
