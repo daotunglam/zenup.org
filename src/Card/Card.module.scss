@@ -1,0 +1,44 @@
+.Card {
+    background-color: transparent;
+    border: 1px solid rgba($color: white, $alpha: 0.1);
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px auto;
+    max-width: 1024px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid rgba($color: white, $alpha: 1);
+    }
+  
+    .header {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+  
+    .content {
+      img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 8px;
+        object-fit: cover; /* Ensure the image fills the container */
+        max-height: 200px; /* Adjust the maximum height as needed */
+      }
+  
+      h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+  
+      p {
+        font-size: 14px;
+      }
+    }
+  
+    .footer {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+  }
+  

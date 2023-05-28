@@ -50,38 +50,20 @@ export default function Navbar() {
 
             <div className="overlay" onClick={toggleNavbar} />
 
-            <div className="itemsBox scrollable">
+            <div className="sidebar scrollable">
 
                 <Link className="navItem" style={{ height: '32px' }} /> {/* this empty container make a distance with top */}
+                
+                <Link to="/" className="navItem"><span>Trang chủ</span></Link>
 
-                <Link to="/" className="navItem">HOME</Link>
+                <Link to="/categories" className="navItem"><span>Thông Tin</span></Link>
 
-                <Link to="/categories" className="navItem">CATEGORIES</Link>
+                <Link to="/explore" className="navItem"><span>Khám Phá</span></Link>
 
-                <Link to="/explore" className="navItem">EXPLORE</Link>
+                <Link to="/work-with-us" className="navItem"><span>Cộng Tác</span></Link>
 
-                {/* 
-                <div className="dropdown">
-                    <div className="navItem">CATEGORIES
-                        <div className="dropdown-content hiddenOnRight showedOnRight">
-                            <Link to="/zenup-workshops" className="dropdown-item">Zenup workshops</Link>
-                            <Link to="/zenup-lifestyles" className="dropdown-item">Zenup Lifestyles</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="dropdown">
-                    <div className="navItem">EXPLORE
-                        <div className="dropdown-content hiddenOnRight showedOnRight">
-                            <Link to="/zenup-library" className="dropdown-item">Zenup Library</Link>
-                            <Link to="/zenup-gallery" className="dropdown-item">Zenup Gallery</Link>
-                            <Link to="/blog" className="dropdown-item">Blog</Link>
-                        </div>
-                    </div>
-                </div> */}
+                <Link to="/contact-us" className="navItem"><span>Liên Hệ</span></Link>
 
-                <Link to="/work-with-us" className="navItem">WORK WITH US</Link>
-
-                <Link to="/contact-us" className="navItem">CONTACT US</Link>
 
             </div>
 

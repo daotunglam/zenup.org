@@ -9,11 +9,60 @@ export default function MindfulnessExercises() {
 
             <div className={M.contentBox}>
                 <CategoryHeader
-                    title='Mindfulness Exercises'
+                    title='Các bài thực tập sống thiền'
                     imgFolder='MindfulnessExercises'
                 />
 
                 <div className={M.section}>
+                    <BoxImgText
+                        image="imgs/Categories/MindfulnessExercises/descriptionBackground1.png"
+                        paragraph={
+                            <>
+                                <p>
+                                    Sống thiền với Zenup không chỉ đơn giản là ngồi xuống nhắm mắt, quan sát hơi thở và tập trung vào bản thân.
+                                </p>
+                                <p>
+                                    Zenup lựa chọn lối sống thiền đến từ Sư thầy Pháp Nhật mang tên “Trọn Vẹn Nhận Biết”
+                                </p>
+                                <p>
+                                    “ Sống trọn vẹn với giây phút đang là một cách hoàn toàn nhận biết, đó chính là bạn đang tiếp xúc với sự sống, bạn đang thiền, bạn đang sống thiền”
+                                    <br />
+                                    -Thầy Pháp Nhật
+                                </p>
+                                <p>
+                                    Khi chúng tôi đồng hành và trải nghiệm các khóa tu tuổi trẻ cùng Thầy Pháp Nhật tại Đức. chúng tôi hiểu rằng sống thiền không chỉ xảy ra trong những khoảnh khắc đặc biệt, mà chính là sự kết nối với cuộc sống hàng ngày. Sống thiền đến từ mọi giây phút đang là trong cuộc sống.  Sống thiền đi vào đời sống và gắn liền với mọi hoạt động chấp tác, từ việc rửa bát, quét lá, nấu ăn, dọn dẹp cho đến việc đi bộ hay thảnh thơi. Thiền không phải là một phương thức trốn tránh cuộc sống, mà là sự trọn vẹn với cuộc sống trong từng giây phút của hiện tại.
+                                </p>
+                                <p>
+                                    “Thiền là trọn vẹn với cuộc sống- bản chất của tu tập, bản chất của thiền không phải là thoát ly cuộc sống mà là trọn vẹn với cuộc sống ngay giây phút đang là này”
+                                </p>
+                                <p>
+                                    Trong các bài thực hành sống thiền này, chúng tôi sẽ chia sẻ thêm các bài tập và trải nghiệm từ các bạn trẻ đã tham gia sống thiền.
+                                </p>
+                                <p>
+                                    Cùng khám phá các hoạt động thiền:
+                                </p>
+                                <p>
+                                    Thiền Hành
+                                    <br />
+                                    Thiền buông thư
+                                    <br />
+                                    Thiền Rửa Bát
+                                    <br />
+                                    Thiền Quét Lá
+                                    <br />
+                                    Thiền Nấu ăn
+                                    <br />
+                                    Thiền dọn dẹp
+                                </p>
+                            </>
+                        }
+                        imageFloat='left'
+                        imageWidth='40%'
+                    />
+                </div>
+
+
+                {/*                 <div className={M.section}>
                     <BoxImgText
                         image="imgs/Categories/MindfulnessExercises/descriptionBackground1.png"
                         paragraph={
@@ -161,7 +210,7 @@ export default function MindfulnessExercises() {
                         imageFloat='right'
                         imageWidth='50%'
                     />
-                </div>
+                </div> */}
             </div>
         </div>
     )

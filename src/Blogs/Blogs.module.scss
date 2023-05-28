@@ -1,0 +1,30 @@
+
+.blogs {
+    text-align: center;
+    margin: 40px auto;
+
+    .CTA_button {
+        font-size: 32px;
+        color: #94A6A5;
+        padding: 20px 48px;
+        white-space: nowrap;
+        background-image: url(../../public/imgs/Explore/desktop/Blog_button.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        cursor: pointer;
+
+        &:hover {
+            filter: brightness(1.05);
+        }
+
+        &:focus,
+        &:active {
+            filter: brightness(1.2);
+        }
+    }
+
+    .description {
+        padding: 24px;
+    }
+}

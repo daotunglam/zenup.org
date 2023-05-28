@@ -1,6 +1,6 @@
 .ScrollSnapVerticalContainer {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
 
     overflow: scroll;
     scroll-behavior: smooth;
@@ -17,7 +17,7 @@
 
     .snapItem {
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
         scroll-snap-align: center; // Scroll Snap
     }
 }

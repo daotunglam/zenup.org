@@ -65,7 +65,7 @@
         background-color: transparent;
         color: #94A6A5;
         font-size: 20px;
-        padding: 16px;
+        padding: 20px;
 
         background-image: url(../../public/imgs/ContactUs/SubmitBtn.png);
         background-repeat: no-repeat;
@@ -74,14 +74,12 @@
         cursor: pointer;
 
         &:hover {
-            color: #3C7CA8;
+            filter: brightness(1.05);
         }
 
         &:focus,
         &:active {
-            color: green;
+            filter: brightness(1.2);
         }
     }
-
-
 }

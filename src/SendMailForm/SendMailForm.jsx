@@ -52,12 +52,12 @@ const SendMailForm = () => {
 
       <div className={M.name}>
         <div>
-          <label for="firstName">First Name *</label>
+          <label for="firstName">Tên</label>
           <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
         </div>
 
         <div>
-          <label for="lastName">Last Name *</label>
+          <label for="lastName">Họ</label>
           <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
         </div>
       </div>
@@ -74,7 +74,7 @@ const SendMailForm = () => {
       </div>
 
       <div className={M.message}>
-        <label for="message">Message *</label>
+        <label for="message">Bạn muốn nói với chúng tôi</label>
         <textarea
           name="message" value={formData.message} onChange={handleChange}
           rows="8"
@@ -82,7 +82,7 @@ const SendMailForm = () => {
         />
       </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit">Gửi</button>
       
       <Snackbar open={snackbarOpen} autoHideDuration={4000} onClose={handleSnackbarClose}>
         <MuiAlert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>

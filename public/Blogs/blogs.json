@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "title": "Kén người đọc #5",
+        "author": "Nguyên Đắc Nguyện",
+        "date": "March , 2023",
+        "content": "Có nhiều điểm khác biệt về cách ứng xử lịch sự trên bàn ăn giữa Hàn Quốc và Nhật Bản. Ở Hàn Quốc, khách tới nhà thường chờ đợi chủ nhà khởi đầu bữa ăn, và khi đó, khách cần bày tỏ lòng biết ơn bằng cách nói \"잘 먹겠습니다\" (jal meokkesseumnida), nghĩa là \"Tôi sẽ ăn ngon miệng\". Khi ăn, người ta thường cầm đũa với tay phải và dùng tay trái để giữ tô cơm.",
+        "tags": [
+            "technology",
+            "programming"
+        ],
+        "featuredImage": "./Blogs/blogImgs/ken-nguoi-doc-5.jfif",
+        "url": "https://hankphung.github.io/blog/ken-nguoi-doc-5.html",
+        "comments": [
+            {
+                "id": "1",
+                "author": "Jane Smith",
+                "date": "2023-01-01",
+                "content": "Great post!"
+            },
+            {
+                "id": "2",
+                "author": "Mike Johnson",
+                "date": "2023-01-02",
+                "content": "I learned a lot from this article. Thanks!"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Từ chuyển niệm đến tùy duyên",
+        "author": "Nguyên Đắc Nguyện",
+        "date": "10 March 2023",
+        "content": "Ta không vui bởi sự việc không vui hay do cách ta nhìn nhận? Bạn đã bao giờ tự hỏi tại sao mỗi người chúng ta lại có những phản ứng khác nhau đối với cùng một tình huống xảy ra? Tại sao khi một chuyện thuận lợi xảy ra, một người có thể buồn bã, thất vọng, lo lắng hoặc tức giận, trong khi người khác có thể giữ bình tĩnh và đối mặt với tình huống đó một cách khôn ngoan?....",
+        "tags": [
+            "design",
+            "inspiration"
+        ],
+        "featuredImage": "./Blogs/blogImgs/tu-chuyen-niem-den-tuy-duyen.jfif",
+        "url": "https://hankphung.github.io/blog/tu-chuyen-niem-den-tuy-duyen.html",
+        "comments": [
+            {
+                "id": "3",
+                "author": "John Doe",
+                "date": "2023-01-16",
+                "content": "Nice work!"
+            }
+        ]
+    }
+]

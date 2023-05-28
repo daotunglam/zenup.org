@@ -1,6 +1,8 @@
 import BoxImgText from '../BoxImgText/BoxImgText';
 import M from './Explore.module.scss';
 import useWindowDimensions from '../hooks/useWindowDimensions';
+import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 export default function Explore() {
     const { width } = useWindowDimensions();
@@ -21,23 +23,47 @@ export default function Explore() {
 
             <div className={M.contentBox}>
 
-                <div className={M.header + ' ' + M.section} />
+                <div className={M.header + ' ' + M.section} >
+                    {isPhone
+                        ?
+                        <div className={clsx(M.header, M.section, M.phone)} >
+                            <div className={M.title}>
+                                Chào mừng
+                                <br />
+                                bạn đến với
+                                <br />
+                                thư viện
+                                <br />
+                                Zenup
+                            </div>
+
+                            <img src="imgs/Explore/symbol.png" alt="symbol explore" />
+                        </div>
+                        :
+                        <div className={clsx(M.header, M.section)} >
+                            <div className={M.title}>
+                                <span>Chào mừng bạn</span><img src="imgs/Explore/symbol.png" alt="symbol explore" />
+                                <br />
+                                <span>đến với thư viện Zenup</span>
+                            </div>
+                        </div>
+                    }
+                </div>
 
                 <div className={M.section}>
                     <BoxImgText
                         image="imgs/Explore/desktop/zenupLibrary.png"
-                        title="Zenup Library"
+                        title="Sách hay là để đọc và để chia sẻ"
                         paragraph={
                             <>
                                 <p>
-                                    Welcome to the Zenup Library, where you can find an extensive collection of resources and materials to help you deepen your understanding and practice of Zen.
+                                    <i>“Vườn sách tỉnh thức cùng Zenup”</i>
                                 </p>
                                 <p>
-                                    Our library boasts a diverse range of materials, including classic Zen texts, contemporary writings, guided meditations, and mindfulness exercises. Whether you are a newbie or a seasoned practitioner to Zen practice, our library has something for everyone.
+                                    Trên chặng đường sống thiền, chúng ta không thể nào quên sự đồng hành của các bạn sách. Trong vườn sách xinh đẹp này, chúng mình sưu tầm và chọn lọc những tác phẩm và nguồn tư liệu hữu ích vô cùng trong hành trình thiền tập.
                                 </p>
                                 <p>
-                                    We invite you to explore our selection of books on Zen philosophy focused on Self-Awareness, teachings from Zen masters- Phap Nhat, and practical guides for meditation and mindfulness to raise our daily awareness.
-                                    Additionally, we offer audio recordings of talks and lectures by a prominent Zen teacher- Phap Nhat, as well as guided meditations that can help you cultivate inner peace and clarity.
+                                    Hãy cùng chúng tôi mở cánh cổng khu vườn này và khám phá sự thú vị bên trong, bạn đã sẵn sàng chưa?
                                 </p>
                             </>
                         }
@@ -72,28 +98,24 @@ export default function Explore() {
 
                     <div className={M.textContainer}>
                         <div className={M.title}>
-                            Zenup Gallery
+                            Những  khoảnh khắc  ZEN
                         </div>
 
                         <div className={M.description}>
                             <p>
-                                Our Zenup Library page also features a community forum where you can connect with other Zen practitioners and discuss your insights and questions. Our moderators are experienced practitioners who are available to offer guidance and support as you explore the Zen path.
+                            Chúng mình đã cùng đồng hành với nhau và nhiều bạn trẻ ở châu Âu trên hành trình sống thiền. Trong những giây phút đang là đó, chúng mình được sống trọng sự bình an hạnh phúc trọn vẹn, được cười nói được thảnh thơi, và được là chính mình. May mắn thay, những khoảnh khắc này đã được ghi lại dưới ống kính của một ai đó và nhờ vậy có thể đem ra chia sẻ tới mọi người.
                             </p>
                             <p>
-                                Our library page is designed to support you in this journey, offering a wealth of resources and a community of like-minded individuals who share your commitment to personal growth and spiritual development. At Zenup, we believe that everyone has the capacity to cultivate mindfulness and inner peace.
-                            </p>
-                            <p>
-                                Thank you for visiting our Zenup Library page and hope that you find our materials helpful on your path towards greater clarity, peace, and wisdom!
+                            Nào mình cùng vui vẻ cười, thảnh thơi vui sống và hạnh phúc là chính mình với Zenup nhé!
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <div className={M.blogs}>
-                    <div className={M.CTA_button}>Blogs</div>
+                <Link to='/zen-journaling' className={M.CTA_button}>Blogs</Link>
                     <div className={M.description}>
                         Read more collected stories written by all people
-                        <br />
                         who are willing to share their journeys
                     </div>
                 </div>

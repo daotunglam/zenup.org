@@ -1,18 +1,36 @@
 import M from './Category.module.scss';
 import CategoryHeader from './CategoryHeader';
 import BoxImgText from '../BoxImgText/BoxImgText';
+import BlogPostCards from '../Blogs/BlogPostCards';
 
 export default function ZenJournaling() {
+
     return (
         <div>
             <div className={M.bgImg} />
 
             <div className={M.contentBox}>
                 <CategoryHeader
-                    title='Zen Journaling'
+                    title='Nhật kí zenup'
                     imgFolder='ZenJournaling'
                 />
+                <div className={M.section}>
+                    <BoxImgText
+                        image="imgs/Categories/ZenJournaling/descriptionBackground1.png"
+                        paragraph={
+                            <p>
+                                Qua những trang nhật ký thiền, bạn sẽ hiểu thêm về sống thiền và những câu chuyện chuyển hoá của các bạn trẻ thực hành lối sống thiền Trọn Vẹn Nhận Biết.
+                            </p>
+                        }
+                        imageFloat='left'
+                    />
+                </div>
 
+                <div className={M.section}>
+                    <BlogPostCards />
+                </div>
+
+                {/* 
                 <div className={M.section}>
                     <BoxImgText
                         paragraph={
@@ -111,6 +129,7 @@ export default function ZenJournaling() {
                         imageWidth='50%'
                     />
                 </div>
+                */}
 
             </div>
         </div>

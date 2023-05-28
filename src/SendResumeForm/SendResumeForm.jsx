@@ -66,12 +66,12 @@ const SendResumeForm = () => {
 
       <div className={M.row}>
         <div>
-          <label for="firstName">First Name *</label>
+          <label for="firstName">Tên</label>
           <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
         </div>
 
         <div>
-          <label for="lastName">Last Name *</label>
+          <label for="lastName">Họ</label>
           <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
         </div>
       </div>
@@ -89,7 +89,7 @@ const SendResumeForm = () => {
 
       <div className={M.row}>
         <div className={M.message}>
-          <label for="message">Message *</label>
+          <label for="message">Bạn muốn nói với chúng tôi</label>
           <textarea
             name="message" value={formData.message} onChange={handleChange}
             rows="8"
@@ -98,7 +98,7 @@ const SendResumeForm = () => {
         </div>
 
         <div>
-          <label className={M.labelText}>Upload your resume</label>
+          <label className={M.labelText}>Upload CV của bạn</label>
           <div htmlFor="attachment" className={M.uploadBtn}>
             <input
               type="file"
@@ -111,15 +111,23 @@ const SendResumeForm = () => {
       </div>
 
 
-      <button type="submit">Submit</button>
+      <button type="submit">Gửi</button>
 
+      <Snackbar open={snackbarOpen} autoHideDuration={4000} onClose={handleSnackbarClose}>
+        <MuiAlert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>
+          Cảm ơn bạn rất nhiều!
+          <br />
+          Email của bạn đã được gửi tới chúng tôi.
+        </MuiAlert>
+      </Snackbar>
+{/*       
       <Snackbar open={snackbarOpen} autoHideDuration={4000} onClose={handleSnackbarClose}>
         <MuiAlert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>
           Thank you for your submission!
           <br />
           Your email has been sent.
         </MuiAlert>
-      </Snackbar>
+      </Snackbar> */}
 
     </form>
   );

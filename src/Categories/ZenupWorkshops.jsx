@@ -14,31 +14,32 @@ export default function ZenupWorkshops() {
 
             <div className={M.contentBox}>
                 <CategoryHeader
-                    title='Zenup Workshops'
+                    title="Sự kiện"
                     imgFolder='ZenupWorkshops'
                 />
 
                 <div className={M.section}>
                     <BoxImgText
                         image="imgs/Categories/ZenupWorkshops/descriptionBackground.png"
-                        title=""
                         paragraph={
                             <>
                                 <p>
-                                    Welcome to Zenup Workshops, where we offer a variety of programs to help individuals and companies cultivate a deeper sense of inner peace, clarity, and focus.
+                                    Khám phá các lịch trình workshop và sự kiện mà chúng tôi tổ chức - một cơ hội để gặp gỡ và trau dồi kỹ năng sống thiền!
                                 </p>
                                 <p>
-                                    Our workshops are designed to introduce participants to the principles of Zen and mindfulness focussed on Self Awareness practice, and to provide them with the tools and techniques they need to develop a regular meditation practice applied in daily activities.
+                                    Zenup tổ chức đều đặn hàng tháng những buổi workshop và chương trình thiền tập, dành cho cá nhân và cả các tổ chức doanh nghiệp. Chúng tôi tạo ra một không gian để trau dồi kỹ năng sống thiền cho mỗi người, giúp họ khám phá hành trình sống Thiền và áp dụng vào cuộc sống hàng ngày.
                                 </p>
                                 <p>
-                                    We offer two types of workshops: individual and company.
+                                    Các sự kiện workshop của chúng tôi không chỉ giới thiệu về sống Thiền, mà còn đặc biệt tập trung vào việc thực hành lối sống trọn vẹn nhận biết. Chúng tôi chia sẻ các phương pháp thiền định thường xuyên mà bạn có thể áp dụng trong cuộc sống hàng ngày, để giúp bạn trở thành phiên bản tốt nhất của chính mình.
                                 </p>
                                 <p>
-                                    Our individual workshops are perfect for those who want to deepen their personal practice of Zen and mindfulness. Our expert instructors will guide you through a variety of meditation techniques, helping you to cultivate greater awareness, concentration, and relaxation.
+                                    Chúng tôi cung cấp hai loại sự kiện: dành cho cá nhân và dành cho công ty.
                                 </p>
                                 <p>
-                                    For companies looking to promote a healthier and more productive workplace, we offer a range of corporate mindfulness workshops. Our programs are designed to help employees reduce stress, increase focus and creativity, and improve overall well-being. Our experienced instructors will work with your team to create a customized program that meets the specific needs of your organization.
-                                    Whether you are looking to deepen your personal practice or create a more mindful workplace, our Zen and Mindfulness Workshops are here to support you on your journey. We invite you to explore our programs and discover the benefits of mindfulness for yourself.
+                                    Sự kiện dành cho cá nhân là dành cho những người muốn thực hành thiền sâu hơn và khám phá cách sống thiền trọn vẹn nhận biết  thông qua việc tham gia vào các hoạt động thiền tập nhóm.
+                                </p>
+                                <p>
+                                    Sự kiện dành cho công ty được thiết kế để tạo ra một môi trường làm việc lành mạnh và hiệu quả hơn. Chương trình của chúng tôi giúp nhân viên giảm căng thẳng, tăng cường tập trung và sáng tạo, đồng thời cải thiện sức khỏe tổng thể. Chúng tôi sẽ làm việc với nhóm của bạn để tạo ra một chương trình tùy chỉnh, đáp ứng đúng nhu cầu của tổ chức và công ty của bạn. Cho dù bạn đang tìm cách tăng cường thiền định cho một nhóm cụ thể hoặc tạo ra một môi trường làm việc chứa đầy chánh niệm, chúng tôi luôn sẵn sàng hỗ trợ bạn trên hành trình của mình.
                                 </p>
                             </>
                         }

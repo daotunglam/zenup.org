@@ -10,6 +10,50 @@ export default function ZenupLifestyles() {
 
             <div className={M.contentBox}>
                 <CategoryHeader
+                    title="Tản mạn về sống thiền"
+                    imgFolder='ZenupLifestyles'
+                />
+
+                <div className={M.section}>
+                    <BoxImgText
+                        image="imgs/Categories/ZenupLifestyles/descriptionBackground.png"
+                        paragraph={
+                            <>
+                                <p>
+                                    Danh sách các câu hỏi thường gặp
+                                </p>
+                                <p>
+                                    Sống thiền là gì?
+                                </p>
+                                <p>
+                                    Trọn vẹn nhận biết là gì?
+                                </p>
+                                <p>
+                                    Lợi ích của sống thiền?
+                                </p>
+                                <p>
+                                    Làm thế nào để bắt đầu sống thiền trọn vẹn nhận biết?
+                                </p>
+                                <p>
+                                    Cần có điều gì để sống thiền?
+                                </p>
+                                <p>
+                                    Zenup có tổ chức  workshop online không?
+                                </p>
+                                <p>
+                                    Tìm kiếm thông tin về khoá thiền sắp tời ở đâu?
+                                </p>
+                            </>
+                        }
+                        imageWidth='40%'
+                        imageFloat='left'
+                    />
+                </div>
+
+            </div>
+            {/* 
+            <div className={M.contentBox}>
+                <CategoryHeader
                     title='Zenup Lifestyles'
                     imgFolder='ZenupLifestyles'
                 />
@@ -39,7 +83,7 @@ export default function ZenupLifestyles() {
                     />
                 </div>
 
-            </div>
+            </div> */}
         </div>
     )
 }

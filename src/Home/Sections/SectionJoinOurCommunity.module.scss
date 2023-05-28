@@ -1,44 +1,63 @@
 .SectionJoinOurCommunity {
     height: 100%;
+    max-width: 1024px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1024px;
-    text-align: center;
-    margin: auto;
 
     .CTA_button {
+        text-align: center;
         font-size: 32px;
-        color: #94A6A5;
-        padding: 20px 48px;
-        white-space: nowrap;
+
+        a {
+            color: #94A6A5;
+        }
+
+        padding: 8px;
         background-image: url(../../../public/imgs/CTA_button.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         cursor: pointer;
+
         &:hover {
-            color: #3C7CA8;
+            filter: brightness(1.05);
         }
-        &:focus, &:active {
-            color: green;
+
+        &:focus,
+        &:active {
+            filter: brightness(1.2);
         }
     }
 
     .text {
+        text-align: justify;
         color: white;
-        padding: 40px;
+        padding: 16px;
+
+        .title {
+            font-size: 60px;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .description {
+            text-align: justify;
+            font-size: 16px;
+        }
     }
 
     .Instas {
+        padding-top: 16px;
         display: flex;
         flex-flow: row nowrap;
-        align-items: center;
         justify-content: space-evenly;
 
         img {
             max-width: 30%;
+            width: 200px;
         }
     }
 

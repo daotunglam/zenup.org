@@ -35,20 +35,7 @@ export default function Footer() {
 
                 <div className={M.gridTplCol200}>
 
-                    <List>
-                        <ListItem>
-
-                            <ListItemAvatar>
-                                <Logo theme='white' />
-                            </ListItemAvatar>
-
-                            {/* <ListItemText
-                                primary='Zen Up UG'
-                                secondary='The masterkey to self awareness'
-                            /> */}
-
-                        </ListItem>
-                    </List>
+                    <Logo theme='white' />
 
                     <div>
                         {/* <p>
