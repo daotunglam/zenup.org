@@ -1,8 +1,7 @@
 import clsx from 'clsx';
 import M from "./Home.module.scss";
-import SectionJoinOurCommunity from "./Sections/SectionJoinOurCommunity";
 
-import './Sections/section.scss';
+import './section.scss';
 
 import useWindowDimensions from '../hooks/useWindowDimensions';
 
@@ -138,24 +137,54 @@ export default function Home() {
                 Nhiệm vụ của Zenup
               </div>
 
-              <p className='description'>
-                Và giờ đây, khi nhận được rất nhiều điều tốt đẹp từ cuộc sống thiền trọn vẹn nhận biết.
-                <br />
-                Chúng tôi luôn trân quý và biết ơn những điều mình may mắn nhận được.
-                <br />
-                Vì thế, chúng tôi muốn lan tỏa, muốn hiến tặng điều chúng tôi đã được nhận đến mọi người, bởi tất cả chúng ta đều xứng đáng.
-                <br />
-                Dù bạn già hay trẻ, dù bạn ở nơi đâu, chỉ cần bạn có mong muốn bình an và mở lòng đón nhận.
-                <br />
-                Chúng ta cùng đồng hành và chia sẻ với nhau trên hành trình về với bình an, trở lại đúng giây phút đang là nhé!
-              </p>
+              <div className='description'>
+                <p>
+                  Và giờ đây, khi nhận được rất nhiều điều tốt đẹp từ cuộc sống thiền trọn vẹn nhận biết. 
+                  Chúng tôi luôn trân quý và biết ơn những điều mình may mắn nhận được. 
+                  Vì thế, chúng tôi muốn lan tỏa, muốn hiến tặng điều chúng tôi đã được nhận đến mọi người, bởi tất cả chúng ta đều xứng đáng. 
+                  Dù bạn già hay trẻ, dù bạn ở nơi đâu, chỉ cần bạn có mong muốn bình an và mở lòng đón nhận. 
+                  Chúng ta cùng đồng hành và chia sẻ với nhau trên hành trình về với bình an, trở lại đúng giây phút đang là nhé! 
+                </p>
+              </div>
             </div>
           </div >
 
         </div>
 
-        <div className={M.snapItem}>
-          <SectionJoinOurCommunity />
+        <div
+          className={`
+          ${M.snapItem}
+          ${isTablet ? 'sectionMobile' : 'sectionDesktop'}
+         `}
+        >
+          <div className='text'>
+            <div className='title'>
+              Đồng hành và chia sẻ cùng Zenup
+            </div>
+            <div className='description'>
+              <p>
+                Chúng tôi tìm thấy nhau, không còn cảm giác lạc lõng nữa, tìm thấy một cộng đồng mà chúng tôi thuộc về.  Đã là những người xa lạ, nhưng khi gặp nhau dường như đã quen biết từ lâu.
+                Chúng tôi chia sẻ cởi mở về cuộc sống và suy nghĩ của mình mà không sợ bị đánh giá.
+                Chúng tôi ủng hộ, đồng hành và động viên nhau. Và đôi khi sự cô đơn hoặc mệt mỏi xuất hiện, chúng tôi biết có những người luôn sẵn sàng nâng đỡ mình lúc đó, để rồi khi đủ vững, mỗi người sẽ tự đứng trên đôi chân của chính mình.
+              </p>
+              <p>
+                Hãy tham gia chia sẻ và đồng hành với ZENUP!
+              </p>
+            </div>
+          </div>
+
+          <div className={M.CTA_button}>
+            <a
+              target="_blank" rel="noreferrer"
+              href="https://www.instagram.com/nauanddandie/"
+            >Tham gia</a>
+          </div>
+
+          <div className={M.Instas}>
+            <img src='imgs/Insta_01.png' alt="Insta_01" />
+            <img src='imgs/Insta_02.png' alt="Insta_02" />
+            <img src='imgs/Insta_03.png' alt="Insta_03" />
+          </div>
         </div>
       </div>
 

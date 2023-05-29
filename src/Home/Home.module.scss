@@ -69,3 +69,40 @@
         }
     }
 }
+
+.CTA_button {
+    text-align: center;
+    font-size: 32px;
+
+    a {
+        color: #94A6A5;
+    }
+
+    padding: 8px;
+    background-image: url(../../public/imgs/CTA_button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(1.05);
+    }
+
+    &:focus,
+    &:active {
+        filter: brightness(1.2);
+    }
+}
+
+.Instas {
+    padding-top: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+
+    img {
+        max-width: 30%;
+        width: 200px;
+    }
+}
