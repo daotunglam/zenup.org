@@ -9,7 +9,7 @@ export default function Home() {
   const { width } = useWindowDimensions();
   const isTablet = width <= 768;
   const isPhone = width <= 480;
-
+  
   return (
     <>
       <div className={M.background}>
@@ -51,7 +51,7 @@ export default function Home() {
 
             <div className='text left'>
               <div className='title'>
-                Sứ mệnh{isPhone ? <br /> : ' - '}Tầm nhìn
+                Sứ mệnh - Tầm nhìn
               </div>
 
               <div className='description'>
@@ -139,11 +139,11 @@ export default function Home() {
 
               <div className='description'>
                 <p>
-                  Và giờ đây, khi nhận được rất nhiều điều tốt đẹp từ cuộc sống thiền trọn vẹn nhận biết. 
-                  Chúng tôi luôn trân quý và biết ơn những điều mình may mắn nhận được. 
-                  Vì thế, chúng tôi muốn lan tỏa, muốn hiến tặng điều chúng tôi đã được nhận đến mọi người, bởi tất cả chúng ta đều xứng đáng. 
-                  Dù bạn già hay trẻ, dù bạn ở nơi đâu, chỉ cần bạn có mong muốn bình an và mở lòng đón nhận. 
-                  Chúng ta cùng đồng hành và chia sẻ với nhau trên hành trình về với bình an, trở lại đúng giây phút đang là nhé! 
+                  Và giờ đây, khi nhận được rất nhiều điều tốt đẹp từ cuộc sống thiền trọn vẹn nhận biết.
+                  Chúng tôi luôn trân quý và biết ơn những điều mình may mắn nhận được.
+                  Vì thế, chúng tôi muốn lan tỏa, muốn hiến tặng điều chúng tôi đã được nhận đến mọi người, bởi tất cả chúng ta đều xứng đáng.
+                  Dù bạn già hay trẻ, dù bạn ở nơi đâu, chỉ cần bạn có mong muốn bình an và mở lòng đón nhận.
+                  Chúng ta cùng đồng hành và chia sẻ với nhau trên hành trình về với bình an, trở lại đúng giây phút đang là nhé!
                 </p>
               </div>
             </div>

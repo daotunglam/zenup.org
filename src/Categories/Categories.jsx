@@ -76,27 +76,22 @@ export default function Categories() {
 
                     <div className={M.contentBox}>
 
-                        <div className={M.box}>
                             {sections.map((section) => (
                                 <Link
                                     key={section.id}
                                     className={M.column}
                                     to={section.route}
                                     onClick={() => setActiveSection(section.id)}
+                                    style={{background: `url(${section.background}) 0 0 / 100% 100% no-repeat `,}}
                                 >
-                                    <img
-                                        className={M.background}
-                                        src={section.background}
-                                        alt={`background ${section.title}`}
-                                    />
 
                                     <div className={clsx(M.content, M.dropAndBound)}>
                                         <img src={section.imgSrc} alt={section.title} />
                                         <div className={M.title}>{section.title}</div>
                                     </div>
+                                    
                                 </Link>
                             ))}
-                        </div>
                     </div>
                 </div>
             )
