@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../Card/Card';
 import M from './BlogPostCards.module.scss';
+import useViewportHeight from '../hooks/useViewportHeight';
 
 export default function BlogPostCards() {
   const [blogData, setBlogData] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
   const [selectedBlogIndex, setSelectedBlogIndex] = useState(null);
+  const vh = useViewportHeight();
 
   useEffect(() => {
     // Fetch the JSON data
@@ -61,7 +63,7 @@ export default function BlogPostCards() {
         <>
           <div className={M.popoverOverlay} onClick={handleClosePopover} />
           
-          <div className={M.popoverContainer}>
+          <div className={M.popoverContainer} style={{height: 0.9 * vh}}>
             <iframe
               className={M.iframe}
               src={blogData[selectedBlogIndex].url}

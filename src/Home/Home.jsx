@@ -1,15 +1,16 @@
 import clsx from 'clsx';
 import M from "./Home.module.scss";
-
 import './section.scss';
 
+import useViewportHeight from '../hooks/useViewportHeight';
 import useWindowDimensions from '../hooks/useWindowDimensions';
 
 export default function Home() {
+  const vh = useViewportHeight();
   const { width } = useWindowDimensions();
   const isTablet = width <= 768;
   const isPhone = width <= 480;
-  
+
   return (
     <>
       <div className={M.background}>
@@ -24,9 +25,11 @@ export default function Home() {
 
       <div className={M.scrollSnapVerticalContainer}>
         <div className={M.snapItem}>
-          <div className={M.headerIntroVideo}>
+          <div className={M.headerIntroVideo} style={{height: vh}}>
             <video
               autoPlay muted loop
+              playsInline  // Add this attribute
+              controls={false}  // Add this attribute to hide controls
               src={
                 isPhone ? 'imgs/headerIntroVideo_phone.mp4'
                   : isTablet ? 'imgs/headerIntroVideo_tablet.mp4'
@@ -46,7 +49,7 @@ export default function Home() {
             isTablet && M.snapItem
           )}>
             <div className="img1">
-              <img src='imgs/Mission.png' alt="Mission" />
+              {!isPhone && <img src='imgs/Mission.png' alt="Mission" />}
             </div>
 
             <div className='text left'>
@@ -72,7 +75,7 @@ export default function Home() {
             isTablet && M.snapItem
           )}>
             <div className="img2">
-              <img src='imgs/WhoWeAre.png' alt="WhoWeAre" />
+              {!isPhone && <img src='imgs/WhoWeAre.png' alt="WhoWeAre" />}
             </div>
 
             <div className='text right'>
@@ -180,11 +183,13 @@ export default function Home() {
             >Tham gia</a>
           </div>
 
-          <div className={M.Instas}>
-            <img src='imgs/Insta_01.png' alt="Insta_01" />
-            <img src='imgs/Insta_02.png' alt="Insta_02" />
-            <img src='imgs/Insta_03.png' alt="Insta_03" />
-          </div>
+          {!isPhone &&
+            <div className={M.Instas}>
+              <img src='imgs/Insta_01.png' alt="Insta_01" />
+              <img src='imgs/Insta_02.png' alt="Insta_02" />
+              <img src='imgs/Insta_03.png' alt="Insta_03" />
+            </div>
+          }
         </div>
       </div>
 

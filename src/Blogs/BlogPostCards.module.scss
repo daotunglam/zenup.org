@@ -11,7 +11,7 @@
     transform: translate(-50%, -50%);
     width: 90vw;
     max-width: 1024px;
-    height: 90vh;
+    // height: 90vh; // style={{height: vh}} in js
     display: flex;
     align-items: center;
     justify-content: center;

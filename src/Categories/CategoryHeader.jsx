@@ -8,7 +8,7 @@ export default function CategoryHeader({ title, imgFolder }) {
 
     const categoryHeaderStyle = {
         width: '100%',
-        height: isPhone? '100dvh' : isTablet ? 'auto' : '100dvh',
+        height: isPhone? '100vh' : isTablet ? 'auto' : '100vh',
         paddingTop: '100px',
         boxSizing: 'border-box',
         display: 'flex',
